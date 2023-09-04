@@ -37,7 +37,7 @@
 		<div class="col-md-6" id="navbar"> 
 			<a href="gebouwen.php">gebouwen</a> |
 			<a href="muurschilderingen.php">muurschilderingen</a> |
-			<a href="over.php">over dit project</a>
+			<a href="over.php">over deze applicatie</a>
 		</div>
 	</div>
 </div>
