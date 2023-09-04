@@ -13,7 +13,7 @@ if(!isset($_GET['id'])){
 
 $i = 0;
 if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle, 0, ";")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
       if(!isset($columnnames)){
         $columnnames = $data;
       }

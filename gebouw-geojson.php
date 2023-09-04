@@ -14,7 +14,7 @@ $gebouw = array();
 
 $i = 0;
 if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle, 0, ";")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
       if($data[0] == $id){
         $gebouw = $data;
         $wdidsstring = "wd:" . $data[2];
