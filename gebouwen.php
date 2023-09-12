@@ -72,7 +72,7 @@ include("_parts/header.php");
 
 		<h1>Gebouwen</h1>
 
-		<div id="search-results" class="row">
+		<div class="row">
 
 			<div class="col-md-8">
 				<table class="table">

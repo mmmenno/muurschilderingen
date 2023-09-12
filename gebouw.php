@@ -9,7 +9,7 @@ if(!isset($_GET['id'])){
   $id = $_GET['id'];
 }
 
-// data gebouw uit gebouwen.csv halen
+// GEGEVENS GEBOUW UIT CSV HALEN
 
 $i = 0;
 if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
@@ -29,6 +29,11 @@ if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
 
 //print_r($gebouw);
 
+
+
+
+
+// GEGEVENS GEBOUW VAN WIKIDATA HALEN
 
 $endpoint = 'https://query.wikidata.org/sparql';
 
@@ -62,6 +67,85 @@ foreach ($data['results']['bindings'] as $rec) {
 	}
 }
 //print_r($wdinfo);
+
+
+
+
+
+
+// MUURSCHILDERINGEN IN DIT GEBOUW UIT CSV HALEN
+
+$schilderingen = array();
+$i = 0;
+if (($handle = fopen("data/muurschilderingen.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+        $i++;
+        if($i==1){
+          $columnnames = $data;
+          continue;
+        }
+        if($data[1] != $id){ // ander gebouw
+          continue;
+        }
+        $n = 0;
+        foreach ($data as $k => $v) {
+          $schilderingen[$data[0]][$columnnames[$n]] = $data[$n];
+          $n++;
+        }
+    }
+    fclose($handle);
+}
+
+
+
+
+
+// IS ER EEN SITUATIESCHETS VAN SCHILDERINGEN IN DIT GEBOUW?
+$schemaimg = "<p>Er is geen situatieschema.</p>";
+if(file_exists("_assets/img/schemas/" . $id . ".jpg")){
+  $schemaimg = '<img class="schemaimg" src="_assets/img/schemas/' . $id . '.jpg" />';
+}
+
+
+
+
+
+// AFBEELDINGEN UIT RCE SPARQL ENDPOINT
+
+$sparqlquery = "PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rm: <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/>
+      
+SELECT * WHERE {
+  ?rmafb ceo:rijksmonumentnummer \"" . $wdinfo['rmnr'] . "\" .
+  ?rmafb a edm:ProvidedCHO .
+  ?rmafb edm:isShownAt ?shownat .
+  ?rmafb edm:isShownBy ?shownby .
+  ?rmafb dc:description ?description .
+  FILTER (REGEX(?shownat,\"cultureelerfgoed\"))
+} LIMIT 1000";
+
+$imgsqueryurl = "https://linkeddata.cultureelerfgoed.nl/rce/cho/sparql/cho#query=" . urlencode($sparqlquery) . "";
+$endpoint = 'https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql';
+
+$json = getSparqlResults($endpoint,$sparqlquery);
+$data = json_decode($json,true);
+
+$imgs = array();
+foreach ($data['results']['bindings'] as $rec) {
+  //print_r($rec);
+  $rceafbid = str_replace("https://linkeddata.cultureelerfgoed.nl/cho-kennis/beeldbank/id/","",$rec['rmafb']['value']);
+  foreach ($rec as $k => $v) {
+    $imgs[$rceafbid][$k] = str_replace("&w=400","",$v['value']);
+  }
+}
+
+
+
+
 
 include("_parts/header.php");
 
@@ -107,13 +191,68 @@ include("_parts/header.php");
 
 		</div>
 
-    <div class="row">
-      <h2>Algemene beschrijving muurschilderingen</h2>
-      <p><?= $gebouw['beschrijving_schildering'] ?></p>
-    </div>
+    <h1>Muurschilderingen</h1>
 
     <div class="row">
-      <h2>Afbeeldingen gebouw RCE beeldbank</h2>
+
+
+      <div class="col-md-6">
+
+        <h2>Algemene beschrijving muurschilderingen</h2>
+        <p><?= $gebouw['beschrijving_schildering'] ?></p>
+
+        <h2>Situatieschema</h2>
+        <?= $schemaimg ?>
+        
+      </div>
+
+      <div class="col-md-6">
+
+        
+
+        <h2>Afzonderlijke muurschilderingen</h2>  
+
+        <?php if(count($schilderingen)){ ?>
+
+          <p>De nummers in de tabel refereren aan de nummers in het situatieschema</p>
+          
+          <table class="table">
+            <tr>
+              <th>id</th>
+              <th>gebouw</th>
+              <th>nr</th>
+              <th>beschrijving</th>
+            </tr>
+          <?php foreach($schilderingen as $schildering){ ?>
+            <tr>
+              <td><a href="muurschildering.php?id=<?= $schildering['id'] ?>"><?= $schildering['id'] ?></a></td>
+              <td><a href="gebouw.php?id=<?= $schildering['gebouw'] ?>"><?= $schildering['gebouw'] ?></a></td>
+              <td><?= $schildering['positie'] ?></td>
+              <td><?= nl2br($schildering['beschrijving']) ?></td>          
+            </tr>
+          <?php } ?>
+          </table>
+
+        <?php  }else{ ?>
+          Er zijn geen afzonderlijke muurschilderingen beschreven.
+        <?php  } ?>
+      </div>
+
+    </div>
+
+
+    <h1>Afbeeldingen gebouw</h1>
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <p>De afbeeldingen zijn opgehaald uit de <a target="_blank" href="<?= $imgsqueryurl ?>">RCE sparql endpoint</a>. Op <a target="_blank" href="https://commons.wikimedia.org/wiki/Category:<?= $wdinfo['commons'] ?>">Wikimedia Commons</a> zijn wellicht meer afbeeldingen te vinden.</p>
+
+        <?php foreach ($imgs as $img) { ?>
+          <a target="_blank" title="<?= $img['description'] ?>" href="<?= $img['shownat'] ?>"><img class="rmimg" src="<?= $img['shownby'] ?>&w=200" /></a>
+        <?php } ?>
+        
+      </div>
     </div>
 
 		

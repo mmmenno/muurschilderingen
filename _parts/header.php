@@ -31,8 +31,9 @@
 
 <div class="container-fluid" id="topbar">
 	<div class="row">
+
 		<div class="col-md-6">
-			<strong>Muurschilderingen db prototype</strong>
+			<strong><a href="index.php">Home</a></strong>
 		</div>
 		<div class="col-md-6" id="navbar"> 
 			<a href="gebouwen.php">gebouwen</a> |
