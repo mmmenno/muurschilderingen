@@ -37,7 +37,7 @@ include("_parts/header.php");
 					<tr>
 						<th>id</th>
 						<th>gebouw</th>
-						<th>nummer</th>
+						<th>positie</th>
 						<th>beschrijving</th>
 					</tr>
 				<?php foreach($schilderingen as $schildering){ ?>

@@ -214,13 +214,13 @@ include("_parts/header.php");
 
         <?php if(count($schilderingen)){ ?>
 
-          <p>De nummers in de tabel refereren aan de nummers in het situatieschema</p>
+          <p>De posities in de tabel refereren aan de nummers in het situatieschema</p>
           
           <table class="table">
             <tr>
               <th>id</th>
               <th>gebouw</th>
-              <th>nr</th>
+              <th>positie</th>
               <th>beschrijving</th>
             </tr>
           <?php foreach($schilderingen as $schildering){ ?>
