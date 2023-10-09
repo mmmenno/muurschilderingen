@@ -26,6 +26,7 @@ include("_parts/header.php");
 					<li><strong>muurschildering</strong></li>
 					<li><strong>restauratie</strong></li>
 					<li>afbeelding</li>
+					<li>bron</li>
 					<li>restauratieverslag</li>
 				</ul>
 

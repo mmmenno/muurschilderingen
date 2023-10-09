@@ -55,7 +55,7 @@ h2{
 	margin-bottom: 20px;
 	padding-bottom: 6px;
 	font-size: 28px;
-	border-bottom: 3px dotted #1f1f1f;
+	border-bottom: 2px dotted #1f1f1f;
 }
 h3{
 	margin-top: 0;
@@ -129,8 +129,21 @@ strong a{
 }
 .muralimg{
 	height: 300px;
-	float: left;
 	margin: 0 20px 20px 0;
+}
+.imglink{
+	position: relative;
+	display: block;
+	float: left;
+}
+.imgyear{
+	position: absolute;
+	top: 0px;
+	opacity: 0.7;
+	background-color: #333;
+	padding: 2px 10px;
+	font-weight: bold;
+	color: #fff;
 }
 .btn-primary{
 	background-color: #000;

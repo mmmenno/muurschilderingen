@@ -238,8 +238,11 @@ include("_parts/header.php");
 				<h2>afbeeldingen</h2>
 
 				<?php foreach ($imgs as $img) { ?>
-					<a title="<?= $img['jaar'] ?>" href="<?= $img['link'] ?>">
+					<a class="imglink" href="<?= $img['link'] ?>">
 						<img class="muralimg" src="<?= $img['url'] ?>" />
+						<?php if(preg_match("/[0-9]{4}/",$img['jaar'])){ ?>
+						<div class="imgyear"><?= $img['jaar'] ?></div>
+						<?php } ?>
 					</a>
 				<?php } ?>
 
