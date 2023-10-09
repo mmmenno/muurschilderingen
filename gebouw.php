@@ -147,6 +147,25 @@ foreach ($data['results']['bindings'] as $rec) {
 
 
 
+// bronnen info uit csv halen
+$bronnen = array();
+$i = 0;
+if (($handle = fopen("data/bronnen.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+
+      if($data[1]!=$id){
+          continue;
+        }
+
+        $bronnen[$data[3]] = $data[3];
+    }
+    fclose($handle);
+}
+
+
+
+
+
 include("_parts/header.php");
 
 ?>
@@ -203,6 +222,16 @@ include("_parts/header.php");
 
         <h2>Situatieschema</h2>
         <?= $schemaimg ?>
+
+        <h2>bronnen</h2>
+            
+        <table class="table">
+          <?php foreach ($bronnen as $bron) { ?>
+          <tr>
+            <td><a href="<?= $bron ?>"><?= $bron ?></a></td>
+          </tr>
+          <?php } ?>
+        </table>
         
       </div>
 

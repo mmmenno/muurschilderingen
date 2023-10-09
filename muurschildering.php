@@ -104,6 +104,25 @@ unset($kunsthist['id']);
 unset($kunsthist['muurschildering']);
 $kunsthist['iconclass'] = '<a href="' . $kunsthist['iconclass'] . '">' . $kunsthist['iconclass'] . '</a>';
 
+
+
+// bronnen info uit csv halen
+$bronnen = array();
+$i = 0;
+if (($handle = fopen("data/bronnen.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+
+    	if($data[2]!=$muralid){
+        	continue;
+        }
+
+        $bronnen[] = $data[3];
+    }
+    fclose($handle);
+}
+
+
+
 // us er een schema?
 $schemaimg = "<p>Er is geen situatieschema.</p>";
 if(file_exists("_assets/img/schemas/" . $metadata[1] . ".jpg")){
@@ -140,20 +159,30 @@ include("_parts/header.php");
 					<tr>
 						<th>beschrijving</th><td><?= $metadata[3] ?></td>
 					</tr>
+					<tr>
+						<th>ruimte</th><td><?= $metadata[5] ?></td>
+					</tr>
+					<tr>
+						<th>locatie in ruimte</th><td><?= $metadata[6] ?></td>
+					</tr>
+					<tr>
+						<th>oriëntatie</th><td><?= $metadata[7] ?></td>
+					</tr>
+					<tr>
+						<th>specificering locatie</th><td><?= $metadata[8] ?></td>
+					</tr>
+					<tr>
+						<th>datering vroegst</th><td><?= $metadata[9] ?></td>
+					</tr>
+					<tr>
+						<th>datering laatst</th><td><?= $metadata[10] ?></td>
+					</tr>
+					<tr>
+						<th>datering opmerking</th><td><?= $metadata[11] ?></td>
+					</tr>
 				</table>
-			</div>
-			<div class="col-md-6">
-
-				<h2>situatieschema</h2>
-        		<?= $schemaimg ?>
-			</div>
-
-		</div>
 
 
-		<div class="row">
-
-			<div class="col-md-6">
 				<h2>kunsthistorisch</h2>
         		
         		<table class="table">
@@ -164,10 +193,27 @@ include("_parts/header.php");
 					<?php } ?>
 				</table>
 
+
+
+				<h2>bronnen</h2>
+        		
+        		<table class="table">
+					<?php foreach ($bronnen as $bron) { ?>
+					<tr>
+						<td><a href="<?= $bron ?>"><?= $bron ?></a></td>
+					</tr>
+					<?php } ?>
+				</table>
+
+
 			</div>
 			<div class="col-md-6">
 
-				<h2>materiaaltechnisch</h2>
+				<h2>situatieschema</h2>
+        		<?= $schemaimg ?>
+
+
+        		<h2>materiaaltechnisch</h2>
 
 				<table class="table">
 					<?php foreach ($mattech as $key => $value) { ?>
@@ -176,7 +222,9 @@ include("_parts/header.php");
 					</tr>
 					<?php } ?>
 				</table>
-        		
+
+
+
 			</div>
 
 		</div>

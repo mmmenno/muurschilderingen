@@ -51,9 +51,11 @@ h1{
 	border-bottom: 5px solid #1f1f1f;
 }
 h2{
-	margin-top: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 	padding-bottom: 6px;
 	font-size: 28px;
+	border-bottom: 3px dotted #1f1f1f;
 }
 h3{
 	margin-top: 0;
