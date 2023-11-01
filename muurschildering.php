@@ -1,5 +1,8 @@
 <?php 
 
+include("_infra/functions.php");
+
+
 $muralid = $_GET['id'];
 
 // data uit muurschilderingen.csv halen
@@ -106,7 +109,7 @@ $kunsthist['iconclass'] = '<a href="' . $kunsthist['iconclass'] . '">' . $kunsth
 
 
 
-// bronnen info uit csv halen
+// bronnen info uit csv halen en labels bij wikidata halen
 $bronnen = array();
 $i = 0;
 if (($handle = fopen("data/bronnen.csv", "r")) !== FALSE) {
@@ -120,6 +123,37 @@ if (($handle = fopen("data/bronnen.csv", "r")) !== FALSE) {
     }
     fclose($handle);
 }
+
+//print_r($bronnen);
+
+$wdbronnenstring = "";
+foreach ($bronnen as $bron) {
+	$wdbronnenstring = "wd:" . str_replace("http://www.wikidata.org/entity/","",$bron) . " ";
+}
+
+$endpoint = 'https://query.wikidata.org/sparql';
+
+$sparql = "
+SELECT ?item ?itemLabel WHERE {
+  VALUES ?item {
+    " . $wdbronnenstring . "
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
+}
+limit 1000";
+
+//echo $sparql;
+//die;
+
+$json = getSparqlResults($endpoint,$sparql);
+$data = json_decode($json,true);
+
+$wdbronnen = array();
+foreach ($data['results']['bindings'] as $rec) {
+	//print_r($rec);
+	$wdbronnen[$rec['item']['value']] = $rec['itemLabel']['value'];
+}
+
 
 
 
@@ -200,7 +234,7 @@ include("_parts/header.php");
         		<table class="table">
 					<?php foreach ($bronnen as $bron) { ?>
 					<tr>
-						<td><a href="<?= $bron ?>"><?= $bron ?></a></td>
+						<td><a href="<?= $bron ?>"><?= $wdbronnen[$bron] ?></a></td>
 					</tr>
 					<?php } ?>
 				</table>
