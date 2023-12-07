@@ -6,7 +6,7 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [muurschilderingen](#Muurschilderingen)
 - [materiaaltechnisch](#Materiaaltechnisch)
 - [kunsthistorisch](#Kunsthistorisch)
-- [bedreigende-gebeurtenissen](#Bedreigende)
+- [bedreigende-gebeurtenissen](#bedreigende-gebeurtenissen)
 - [afbeeldingen](#Afbeeldingen)
 
 
