@@ -34,23 +34,25 @@ De naam van het gebouw.
 
 De huidige hoofdfunctie van het gebouw
 
-### Patrocinium
+### patrocinium
 
-Beschermheilige gebouw
-Thesaurus: Iconclass
+Geef een Wikidata Qnummer (bijv. 'Q183332' voor Sint-Sebastiaan). We kunnen dit misschien beter op Wikidata aangeven met de property P417 (patroonheilige).
 
-### Type verwarming
+### verwarming-type
 
-Keuzelijst: 
-- convector kachel
-- electrische kachel
-- gaskachel / gashaard
-- hout- of pelletkachel
-- open haard
-- vloerverwarming
-- overig
+| kies optie |
+| ----------- |
+| convector kachel |
+| electrische kachel |
+| gaskachel / gashaard |
+| hout- of pelletkachel |
+| open haard |
+| vloerverwarming |
+| overig |
 
-### Datum invoer type verwarming
+### verwarming-sinds
+
+
 
 ../../....
 
@@ -297,15 +299,15 @@ Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale 
 
 [materiaaltechnisch.csv]() bevat de volgende velden:
 
-### Muurschildering
+### muurschildering
 
 Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
 
-### Hoogte
+### hoogte
 
 De hoogte van de muurschildering in centimeters
 
-### Breedte
+### breedte
 
 De breedte van de muurschildering in centimeters
 
@@ -315,7 +317,7 @@ Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus |
 | ---- | ---------------------------- |
-| baksteen | [https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac]()|
+| bakstenen | [https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac]()|
 | beton | [https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7]() |
 | graniet | [https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f]()|
 | tufsteen | [https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5]() |
@@ -334,15 +336,17 @@ Linken met erfgoedthesaurus
 
 ### Schildertechniek
 
-keuzelijst:
-- graffiti
-- fresco
-- secco
-- keim
-- tekening
-- kalkschildering
+Kies één van de volgende termen:
 
-Linken naar erfgoedthesaurus
+| term | cultuurhistorische thesaurus |
+| ---- | ---------------------------- |
+| graffiti | [https://data.cultureelerfgoed.nl/term/id/cht/f302aa2a-05cf-4994-9ae9-118639374bb2]() |
+| fresco | [https://data.cultureelerfgoed.nl/term/id/cht/551d2fbc-c358-4229-aca8-320bdfacdcd7]() |
+| secco | [https://data.cultureelerfgoed.nl/term/id/cht/c7c593d5-2b94-4413-be91-0d98984458af]() |
+| keim | |
+| tekening | [https://data.cultureelerfgoed.nl/term/id/cht/eb9e1e5b-b319-4519-a4f5-0dd26dbf4524]() |
+| kalkschildering | |
+
 
 ### Grondlaag
 
