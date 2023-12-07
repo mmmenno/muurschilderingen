@@ -6,6 +6,7 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [muurschilderingen](#Muurschilderingen)
 - [materiaaltechnisch](#Materiaaltechnisch)
 - [kunsthistorisch](#Kunsthistorisch)
+- [bedreigende-gebeurtenissen](#Bedreigende)
 - [afbeeldingen](#Afbeeldingen)
 
 
@@ -30,9 +31,9 @@ Het wikidata Qnummer van het gebouw, bijvoorbeeld 'Q2618966'.
 
 De naam van het gebouw.
 
-### Huidige functie/gebruik gebouw
+### huidige-functie
 
-De huidige hoofdfunctie van het gebouw
+De huidige hoofdfunctie van het gebouw.
 
 ### ~~patrocinium~~
 
@@ -52,17 +53,15 @@ Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de 
 
 ### verwarming-sinds
 
+Het jaar sinds wanneer het verwarming-type gebruikt wordt.
 
-
-../../....
-
-### Bouwgeschiedenis
+### bouwgeschiedenis
 Opsomming korte beschrijving met aanduiding periodes / jaartallen bouwgeschiedenis
 
-### Restauratiegeschiedenis
+### restauratiegeschiedenis
 Korte beschrijving met aanduiding periodes / jaartallen restauraties
 
-### Geschiedenis van schade
+### schadegeschiedenis
 Korte beschrijving van scheurvorming, verzakkingen, lekkage mbt eventuele schade muurschilderingen.
 Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
 
@@ -264,6 +263,8 @@ Eventuele nadere opmerking
 
 Zijn bijvoorbeeld bepaalde lagen van een schildering bijvoorbeeld verwijderd of juist overschilderd.
 
+## Bedreigende gebeurtenissen
+[bedreigende-gebeurtenissen]() bevat de volgende velden:
 
 
 ## Restauraties
