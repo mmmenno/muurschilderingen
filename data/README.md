@@ -100,6 +100,7 @@ Literatuurverwijzingen uit bron
 ### Categorie culturele waardestelling
 
 keuzelijst:
+
 - zeer waardevol (internationaal belang)
 - zeer behoudenswaardig (nationaal van belang)
 - behoudenswaardig (regionaal van belang)
@@ -108,6 +109,7 @@ keuzelijst:
 ### Categorie conditie / staat beoordeling
 
 keuzelijst:
+
 - dringende noodzaak tot behandeling
 - noodzaak tot behandeling
 - mogelijke behandeling
@@ -116,6 +118,7 @@ keuzelijst:
 ### Categorie aanbeveling restauratie / consolidatie
 
 keuzelijst:
+
 - hoogste prioriteit
 - hoge prioriteit
 - gemiddelde prioriteit
@@ -136,7 +139,7 @@ Naam bedrijf / restaurator
 
 
 ## Kunsthistorisch
-[kunsthistorisch.csv] () bevat de volgende velden:
+[kunsthistorisch.csv]() bevat de volgende velden:
 
 ### Muurschildering id
 
@@ -152,6 +155,7 @@ Eventueel nader aan te duiden locatie (bv linker nis noordzijde)
 ### Orientatie NOZW
 
 keuzelijst:
+
 - Noord
 - Oost
 - Zuid
@@ -176,12 +180,12 @@ Link naar RKDartist
 
 ### Datering schildering
 
-.... - ....
+jjjj - jjjj
 
 voorbeelden notatie:
-1ste kwart 14de eeuw = 1300 - 1325
-voor de 2de helft 15de eeuw = jaartal bouw - 1450
-ca. 1275 = 1270 - 1280
+1ste kwart 14de eeuw = 1300 - 1325;
+voor de 2de helft 15de eeuw = jaartal bouw - 1450;
+ca. 1275 = 1270 - 1280;
 ca. 1510-1520 = 1510 - 1520
 
 ### Opmerking datering
