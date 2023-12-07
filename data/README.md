@@ -34,9 +34,9 @@ De naam van het gebouw.
 
 De huidige hoofdfunctie van het gebouw
 
-### patrocinium
+### ~~patrocinium~~
 
-Geef een Wikidata Qnummer (bijv. 'Q183332' voor Sint-Sebastiaan). We kunnen dit misschien beter op Wikidata aangeven met de property P417 (patroonheilige).
+Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de property [P417](https://www.wikidata.org/wiki/Property:P417) (patroonheilige). Op deze [lijst met rijksmonumentale kerken met patroonheilige](https://w.wiki/8QcW) zie je van welke kerken dat al gedaan is.
 
 ### verwarming-type
 
