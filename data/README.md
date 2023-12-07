@@ -3,6 +3,7 @@
 Dit document beschrijft in welke velden en met welke waarden een en ander beschreven wordt. De informatie is onderverdeeld in de volgende csv-bestanden:
 
 - [gebouwen](#Gebouwen)
+- [muurschilderingen-overzicht](#muurschilderingen-overzicht)
 - [muurschilderingen](#Muurschilderingen)
 - [materiaaltechnisch](#Materiaaltechnisch)
 - [kunsthistorisch](#Kunsthistorisch)
@@ -31,7 +32,7 @@ Het wikidata Qnummer van het gebouw, bijvoorbeeld 'Q2618966'.
 
 De naam van het gebouw.
 
-### huidige-functie
+### huidige_functie
 
 De huidige hoofdfunctie van het gebouw.
 
@@ -39,7 +40,7 @@ De huidige hoofdfunctie van het gebouw.
 
 Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de property [P417](https://www.wikidata.org/wiki/Property:P417) (patroonheilige). Op deze [lijst met rijksmonumentale kerken met patroonheilige](https://w.wiki/8QcW) zie je van welke kerken dat al gedaan is.
 
-### verwarming-type
+### type_verwarming
 
 | kies optie |
 | ----------- |
@@ -51,7 +52,7 @@ Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de 
 | vloerverwarming |
 | overig |
 
-### verwarming-sinds
+### type\_verwarming\_sinds
 
 Het jaar sinds wanneer het verwarming-type gebruikt wordt.
 
@@ -68,9 +69,75 @@ Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
 
 
 
+
+## Muurschilderingen overzicht
+
+De tabel [muurschilderingen-overzicht.csv]() is bedoeld om per gebouw alle muurschilderingen samen kort te beschrijven en iets te zeggen over conditie en waardestelling van het geheel aan muurschilderingen. De csv bevat de volgende velden:
+
+### gebouwid
+
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](), bijvoorbeeld 'RM8247'.
+
+### beschrijving
+
+Een algemene beschrijving van de soorten muurschilderingen in verschillende periodes
+
+### beschrijving_bron
+
+Bron van algemene beschrijving of naam wie beschrijving heeft gemaakt
+
+### literatuur
+
+Literatuurverwijzingen uit bron
+
+### culturele_waardestelling
+
+| categorie | uitleg |
+| --------- | ------ |
+| zeer waardevol | internationaal belang |
+| zeer behoudenswaardig | nationaal van belang |
+| behoudenswaardig | regionaal van belang |
+| enigszins behoudenswaardig | plaatselijk van belang |
+
+### beoordeling\_staat\_conditie
+
+| categorie |
+| --------- |
+| dringende noodzaak tot behandeling |
+| noodzaak tot behandeling |
+| mogelijke behandeling |
+| conditie bevredigend |
+
+### aanbeveling\_restauratie\_consolidatie
+
+| categorie |
+| --------- |
+| hoogste prioriteit |
+| hoge prioriteit |
+| gemiddelde prioriteit |
+| lage prioriteit |
+
+### beschrijving\_staat\_conditie
+
+Beschrijving van huidige staat / conditie muurschildering.
+
+### laatste_conditiebeschrijving
+
+Datum van de laatste conditiebeschrijving, als `dd-mm-jjjj`
+
+### beoordelaar
+
+Naam van het bedrijf dat / de restaurator die de beoordeling gedaan heeft.
+
+
+
+
+
+
+
 ## Muurschilderingen
 
-[muurschilderingen.csv]() bevat de volgende velden:
+De tabel [muurschilderingen.csv]() beschrijft elke muurschildering afzonderlijk en bevat de volgende velden:
 
 ### id
 
@@ -80,63 +147,6 @@ De identifier van de muurschildering. Gebruik het gebouwid + 'MU' + nummer. Logi
 
 Het nummer waarmee de positie aangegeven wordt in het schema, bijv. '11' of '11b'.
 
-
-
-
-## Muurschilderingen algemeen in het gebouw
-
-muurschilderingen algemeen bevat de volgende velden:
-
-### Algemene beschrijving muurschildering
-
-Een algemene beschrijving van de soorten muurschilderingen in verschillende periodes
-
-### Bronvermelding
-
-Bron van algemene beschrijving of naam wie beschrijving heeft gemaakt
-
-### Literatuur
-
-Literatuurverwijzingen uit bron
-
-### Categorie culturele waardestelling
-
-keuzelijst:
-
-- zeer waardevol (internationaal belang)
-- zeer behoudenswaardig (nationaal van belang)
-- behoudenswaardig (regionaal van belang)
-- enigszins behoudenswaardig (plaatselijk van belang)
-
-### Categorie conditie / staat beoordeling
-
-keuzelijst:
-
-- dringende noodzaak tot behandeling
-- noodzaak tot behandeling
-- mogelijke behandeling
-- conditie bevredigend
-
-### Categorie aanbeveling restauratie / consolidatie
-
-keuzelijst:
-
-- hoogste prioriteit
-- hoge prioriteit
-- gemiddelde prioriteit
-- lage prioriteit
-
-### Conditie / staat beschrijving
-
-Beschrijving van huidige staat / conditie muurschildering
-
-### Datum laatste conditiebeschrijving
-
-../../....
-
-### Door wie verricht
-
-Naam bedrijf / restaurator
 
 
 
@@ -479,15 +489,15 @@ Beschrijving wat voor en waar de schade is
 ## Bronnen
 [bronnen.csv]() bevat de volgende velden:
 
-### Monumentnummer
-id van het gebouw, het rijksmonumentnummer
+### gebouw
+De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
 
-### Muurschildering id
+### muurschildering
 
-De identifier van de muurschildering, zie [muurschilderingen.csv]. 
+De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
 
-### Link
-Link naar de bron online, ofwel betreffende muurschildering of gebouw
+### bron
+Dit kan een wikidata item zijn, maar ook een link naar een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
 ### Fysieke loactie
 Indien niet digitaal, waar is de bron te raadplegen?
