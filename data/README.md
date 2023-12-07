@@ -309,19 +309,23 @@ De hoogte van de muurschildering in centimeters
 
 De breedte van de muurschildering in centimeters
 
-### Constructie
+### constructie
 
-Keuzelijst:
-- baksteen
-- beton
-- graniet
-- tufsteen
-- kalksteen
-- onbepaald
-- overig
-- veldkeien
-- zandsteen
-Linken met erfgoedthesaurus
+Kies één van de volgende termen:
+
+| term | cultuurhistorische thesaurus |
+| ---- | ---------------------------- |
+| baksteen | [https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac]()|
+| beton | [https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7]() |
+| graniet | [https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f]()|
+| tufsteen | [https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5]() |
+| kalksteen | [https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53]() |
+| keien | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
+| zandsteen | [https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d]() |
+
+Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien specifieker (Kloostermop, Doornikse steen, Bentheimer zandsteen) of anders.
+
+
 
 ### Opmerking over constructie
 
