@@ -84,7 +84,7 @@ Een algemene beschrijving van de soorten muurschilderingen in verschillende peri
 
 ### beschrijving_bron
 
-Bron van algemene beschrijving of naam wie beschrijving heeft gemaakt
+Bron van de algemene beschrijving of naam van de persoon die de beschrijving heeft gemaakt. Als de bron een op Wikidata beschreven boek, persoon, etc. is, gebruik dan het Wikidata Qnummer.
 
 ### literatuur
 
