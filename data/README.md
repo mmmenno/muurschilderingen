@@ -93,7 +93,7 @@ Literatuurverwijzingen uit bron
 ### culturele_waardestelling
 
 | categorie | uitleg |
-| --------- | ------ |
+| :-------- | :----- |
 | zeer waardevol | internationaal belang |
 | zeer behoudenswaardig | nationaal van belang |
 | behoudenswaardig | regionaal van belang |
@@ -102,7 +102,7 @@ Literatuurverwijzingen uit bron
 ### beoordeling\_staat\_conditie
 
 | categorie |
-| --------- |
+| :-------- |
 | dringende noodzaak tot behandeling |
 | noodzaak tot behandeling |
 | mogelijke behandeling |
@@ -111,7 +111,7 @@ Literatuurverwijzingen uit bron
 ### aanbeveling\_restauratie\_consolidatie
 
 | categorie |
-| --------- |
+| :-------- |
 | hoogste prioriteit |
 | hoge prioriteit |
 | gemiddelde prioriteit |
@@ -147,125 +147,108 @@ De identifier van de muurschildering. Gebruik het gebouwid + 'MU' + nummer. Logi
 
 Het nummer waarmee de positie aangegeven wordt in het schema, bijv. '11' of '11b'.
 
+### titel
+
+Titel of korte aanduiding van de muurschildering.
+
+### volgnr
+
+Nummer, gebruikt om op te sorteren.
+
+### ruimte
+
+Locatie in het gebouw van de muurschildering. Voorbeelden: 'eerste travee', 'tweede travee', 'gewelf koortravee en koorsluiting', 'koor', 'triomfboog'.
+ 
+### locatie\_in\_ruimte
+
+Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zuidwand', 'noord- en zuidzijde'.
+
+### orientatie_nozw
+
+| keuze |
+| ----- |
+| noord |
+| oost |
+| zuid |
+| west |
+
+
+
+
 
 
 
 ## Kunsthistorisch
 [kunsthistorisch.csv]() bevat de volgende velden:
 
-### Muurschildering id
+### muurschildering
 
-### Welke ruimte bevindt zich de muurschildering
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
 
-Locatie in het gebouw van de muurschildering (bv derde travee)
-koppeling naar Erfgoedthesaurus
+### beschrijving
 
-### Nadere specificering locatie schildering
+Kunsthistorische beschrijving muurschildering.
 
-Eventueel nader aan te duiden locatie (bv linker nis noordzijde)
+### vervaardiger
 
-### Orientatie NOZW
+RKDartist URI (bijv. `https://rkd.nl/explore/artists/72909`) of Wikidata Qnummer van de maker van de muurschildering.
 
-keuzelijst:
+### datering_vroegst
 
-- Noord
-- Oost
-- Zuid
-- West
+Jaartal `jjjj` van de vroegst mogelijke vervaardigingsdatum, '1300' als het werk in het eerste kwart van de 14e eeuw is vervaardigd.
 
-### Schema
+### datering_laatst
 
-Nummer muurschildering in schema
+Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk in het eerste kwart van de 14e eeuw is vervaardigd.
 
-### Beschrijving
-
-Beschrijving muurschildering
-
-### Titel
-
-Titel muurschildering
-
-### Vervaardiger
-
-Naam vervaardiger
-Link naar RKDartist
-
-### Datering schildering
-
-jjjj - jjjj
-
-voorbeelden notatie:
-1ste kwart 14de eeuw = 1300 - 1325;
-voor de 2de helft 15de eeuw = jaartal bouw - 1450;
-ca. 1275 = 1270 - 1280;
-ca. 1510-1520 = 1510 - 1520
-
-### Opmerking datering
+### datering_opmerking
 
 Eventuele extra informatie over datering
 
-### Bronnen informatie 
+### motief_thema
 
-Verwijzing naar QXXXXXXXXX nummer Wikidata
+Geef een Wikidata Qnummer van een artistiek thema of bijbelverhaal.
 
-### Motief
+Een overzicht van artistieke thema's vind je op [https://w.wiki/8RLS]()
+Een overzicht van bijbelverhalen vind je op [https://w.wiki/8RLV]()
 
-keuzelijst:
-- Verhalen
-- Personen en wezens
-- Allegorieen
-- Ornamentiek
-- Tekens en merken
+### motief_ornamentiek
+
+| term | cultuurhistorische thesaurus | aat |
+| ---- | ---------------------------- | --- |
+| Beslag en cartouche |  |  |
+| cartouche |  | [https://vocab.getty.edu/aat/300010256]() |
+| Bloem, naturalistisch |  |  |
+| Bloem, stilistisch |  |  |
+| bloem |  | [https://vocab.getty.edu/aat/300375563]() |
+| Cirkel, vierkant, driehoek, ruit |  |  |
+| geometrisch motief |  | [https://vocab.getty.edu/aat/300009764]() |
+| Fruit en bessen |  |  |
+| Lint (gedraaid, gevlochten) |  |  |
+| lint |  | [https://vocab.getty.edu/aat/300387440]() |
+| Mens, dier en wezen |  |  |
+| Muizentrap |  |  |
+| trappatroon |  | [https://vocab.getty.edu/aat/300010229]() |
+| meander |  | [https://vocab.getty.edu/aat/300165279]() |
+| palmette |  | [https://vocab.getty.edu/aat/300009995]() |
+| plantmotief |  | [https://vocab.getty.edu/aat/300164599]() |
+| ster |  | [https://vocab.getty.edu/aat/300009811]() |
+
+Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI. Zoek bijvoorbeeld binnen de lijst [patroon (ontwerpelementen)](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300010108) of [motieven](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300009700).
+
+### motief_tekens
+
+| term | cultuurhistorische thesaurus | aat |
+| ---- | ---------------------------- | --- |
+| inscripties |  | [https://vocab.getty.edu/aat/300028702]() |
+| keurmerken |  |  |
+| merkteken |  | [https://vocab.getty.edu/aat/300028744]() |
+| wapenschilden | [https://data.cultureelerfgoed.nl/term/id/cht/c58475d5-0795-4623-b4be-ea1524f4b4fb]() | [https://vocab.getty.edu/aat/300138227]() |
+| wijdingskruisen |  | [https://vocab.getty.edu/aat/300395632]() |
+
   
-### Motief verfijning
-
-- Verhalen:
-  Scenes van een gebeurtenis, een situatie of verhaal
-  keuzelijst:
-  - bijbels
-  - literatuur
-  - mythologie
-  - historisch
-  - scenes uit alledaags leven
-
-
-- Personen en wezens:
-  levende of historische personen, heiligen, bijbelse of mythologische persomages, dieren en denkbeeldige wezens
-  keuzelijst niet te doen
-  Linken naar 
-  - Iconclass
-  - Artistic themes Wiki
-  - ?
-
-- Allegorieen:
-  Scenes met allegorische of symbolische betekenis
-  Linken naar
-  - Iconclass
-  ?
-
-- Ornamentiek
-  keuzelijst, bijvoorbeeld en uit te breiden:
-  - Beslag en cartouche
-  - Bloem, naturalistisch
-  - Bloem, stilistisch
-  - Cirkel, vierkant, driehoek, ruit
-  - Fruit en bessen
-  - Lint (gedraaid, gevlochten)
-  - Mens, dier en wezen
-  - Muizentrap
-  - Meander
-  - Palmette
-  - Plantmotief
-  - Ster
- 
-- Tekens en merken
-  keuzelijst:
-  - inscripties
-  - keurmerken
-  - wapenschilden
-  - wijdingskruisen
     
-### Opmerking over motief
+### motief_opmerking
 
 Eventuele nadere opmerking 
 
@@ -379,68 +362,77 @@ keuzelijst:
 
 ### Schade door vervuiling
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
 
 ### (Vocht)vlekken
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 ### Micro bacteriele activiteit
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 
 ### Schade door zout
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 ### Pleisterschade
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 ### Scheuren
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 ### Beschadiging in verf en onderliggende lagen
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 ### Verkleuring
 
-keuzelijst:
-- omvangrijk
-- in grote mate
-- in mindere mate
-- onbetekenend
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
 
 ### Opmerkingen betreffende schade
