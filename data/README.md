@@ -291,6 +291,8 @@ Zijn bijvoorbeeld bepaalde lagen van een schildering bijvoorbeeld verwijderd of 
 
 
 
+
+
 ## Bedreigende gebeurtenissen
 [bedreigende-gebeurtenissen]() bevat de volgende velden:
 
@@ -310,20 +312,20 @@ id van de muurschildering
 | overstroming |
 
 
-### Locatie
+### locatie
 Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
 
-### Ernst bedreigende gebeurtenis
+### ernst bedreigende gebeurtenis
 Geef de ernst  aan op de volgende schaal:
 100-75 % : zeer ernstig
 75-50 % : ernstig
 50-25 % : behoorlijk
 25-0 % : gering
 
-### Beschrijving bedreigende gebeurtenis
+### beschrijving bedreigende gebeurtenis
 Beschrijf de bedreigende gebeurtenis
 
-### Datum bedreigende gebeurtenis
+### datum bedreigende gebeurtenis
 
 ../../....
 
@@ -333,26 +335,30 @@ Beschrijf de bedreigende gebeurtenis
 
 [restauraties.csv] () bevat de volgende velden:
 
-### Jaartallen restauratie
+### monument_id
+id nummer van het gebouw
+
+
+### jaartallen restauratie
 
 .... - ....
 
 
-### Bijbehorende restaurator
+### bijbehorende restaurator
 
 Naam bedrijf / restaurator
 
-### Activiteit
+### activiteit
 
 Wat was / is belangrijkste activiteit geweest
 Vrij invoerveld of keuzelijst van maken?
 
 
-### Beschrijving restauratie
+### beschrijving restauratie
 
 Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
 
-### Restauratieverslagen
+### restauratieverslagen
 
 Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale locatie.
 
