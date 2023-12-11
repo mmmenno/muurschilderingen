@@ -15,7 +15,6 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [literatuurverwijzing](#Literatuurverwijzing)
 
 
-
 ## Gebouwen
 
 [gebouwen.csv]() bevat de volgende velden:
