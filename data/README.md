@@ -235,7 +235,9 @@ Vermeld de bron(nen) van voorgaande ingevoerde informatie
 | verhalend |
 
 
-### motief_thema_specifiek, Verhalend, Personen en wezens, Allegorieen
+### motief_thema_specifiek
+
+Verhalend, Personen en wezens, Allegorieen
 
 Geef een Wikidata Qnummer van een artistiek thema of bijbelverhaal.
 
