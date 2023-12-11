@@ -11,8 +11,8 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [restauraties](#Restauraties)
 - [bedreigende-gebeurtenissen](#bedreigende-gebeurtenissen)
 - [afbeeldingen](#Afbeeldingen)
-- [Bronnen_links](#Bronnen-links)
-- [literatuur](#Literatuur)
+- [bronnen_links](#Bronnen-links)
+- [literatuurverwijzing](#Literatuurverwijzing)
 
 
 
