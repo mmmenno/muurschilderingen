@@ -606,7 +606,7 @@ Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende m
 
 
 
-## Bronnen
+## Bronnen_links
 [bronnen.csv]() bevat de volgende velden:
 
 ### monument_id
@@ -624,8 +624,8 @@ Indien niet digitaal, waar is de bron te raadplegen?
 
 
 
-## Literatuur
-[literatuur.csv}() bevat de volgende velden:
+## Literatuurverwijzing
+[literatuurverwijzing.csv}() bevat de volgende velden:
 
 ### monument_id
 De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
