@@ -59,12 +59,21 @@ Het jaar sinds wanneer het verwarming-type gebruikt wordt.
 ### bouwgeschiedenis
 Opsomming korte beschrijving met aanduiding periodes / jaartallen bouwgeschiedenis
 
+### bron bouwgeschiedenis
+Verwijzing naar boeken, artikelen, personen waar informatie vandaag komt
+
 ### restauratiegeschiedenis
 Korte beschrijving met aanduiding periodes / jaartallen restauraties
 
 ### schadegeschiedenis
 Korte beschrijving van scheurvorming, verzakkingen, lekkage mbt eventuele schade muurschilderingen.
 Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
+
+### ingevoerd door:
+Naam invoerder informatie over restaturatiegeschiedenis en schadegeschiedenis
+
+### bron restauratie- en schadegeschiedenis
+Eventuele verwijzing naar restauratie- of bouwhistorisch verslag of publicatie
 
 
 
@@ -139,7 +148,7 @@ Naam van het bedrijf dat / de restaurator die de beoordeling gedaan heeft.
 
 De tabel [muurschilderingen.csv]() beschrijft elke muurschildering afzonderlijk en bevat de volgende velden:
 
-### id
+### muurschildering_id
 
 De identifier van de muurschildering. Gebruik het gebouwid + 'MU' + nummer. Logischerwijs begint de nummering bij 1 en is die oplopend.
 
@@ -168,9 +177,13 @@ Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zu
 | keuze |
 | ----- |
 | noord |
+| noordoost |
 | oost |
+| zuidoost |
 | zuid |
+| zuidwest |
 | west |
+| noordwest |
 
 
 
@@ -181,7 +194,7 @@ Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zu
 ## Kunsthistorisch
 [kunsthistorisch.csv]() bevat de volgende velden:
 
-### muurschildering
+### muurschildering_id
 
 Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
 
@@ -205,12 +218,30 @@ Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk 
 
 Eventuele extra informatie over datering
 
+### bron_kunsthist 1
+Vermeld de bron(nen) van voorgaande ingevoerde informatie
+
+### bron_kunsthist 2
+Vermeld de bron(nen) van voorgaande ingevoerde informatie
+
 ### motief_thema
+
+| keuze |
+| ----- |
+| allegorie |
+| ornamentiek |
+| personen en wezens |
+| tekens en merken |
+| verhalend |
+
+
+### motief_thema_specifiek, Verhalend, Personen en wezens, Allegorieen
 
 Geef een Wikidata Qnummer van een artistiek thema of bijbelverhaal.
 
 Een overzicht van artistieke thema's vind je op [https://w.wiki/8RLS]()
 Een overzicht van bijbelverhalen vind je op [https://w.wiki/8RLV]()
+
 
 ### motief_ornamentiek
 
@@ -256,8 +287,44 @@ Eventuele nadere opmerking
 
 Zijn bijvoorbeeld bepaalde lagen van een schildering bijvoorbeeld verwijderd of juist overschilderd.
 
+
+
 ## Bedreigende gebeurtenissen
 [bedreigende-gebeurtenissen]() bevat de volgende velden:
+
+### monumentnummer_id
+id van het gebouw
+
+### muurschildering_id
+id van de muurschildering
+
+### soort_gebeurtenis
+
+| keuze |
+| ----- |
+| aardbeving |
+| brand |
+| lekkage |
+| overstroming |
+
+
+### Locatie
+Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
+
+### Ernst bedreigende gebeurtenis
+Geef de ernst  aan op de volgende schaal:
+100-75 % : zeer ernstig
+75-50 % : ernstig
+50-25 % : behoorlijk
+25-0 % : gering
+
+### Beschrijving bedreigende gebeurtenis
+Beschrijf de bedreigende gebeurtenis
+
+### Datum bedreigende gebeurtenis
+
+../../....
+
 
 
 ## Restauraties
@@ -276,10 +343,10 @@ Naam bedrijf / restaurator
 ### Activiteit
 
 Wat was / is belangrijkste activiteit geweest
-Keuzelijst van maken?
+Vrij invoerveld of keuzelijst van maken?
 
 
-### Beschrijving restauretie
+### Beschrijving restauratie
 
 Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
 
@@ -294,7 +361,7 @@ Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale 
 
 [materiaaltechnisch.csv]() bevat de volgende velden:
 
-### muurschildering
+### muurschildering_id
 
 Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
 
@@ -310,14 +377,24 @@ De breedte van de muurschildering in centimeters
 
 Kies één van de volgende termen:
 
+| keuze |
+| ----- |
+| baksteen | [https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac]()|
+| beton | [https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7]() |
+| natuursteen | [https://data.cultureelerfgoed.nl/term/id/cht/41febb28-264d-4b64-a6ef-5716e43c0154]() |
+
+Laat leeg indien 'onbepaald'
+
+### Verfijning_constructie
+
 | term | cultuurhistorische thesaurus |
 | ---- | ---------------------------- |
-| bakstenen | [https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac]()|
-| beton | [https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7]() |
 | graniet | [https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f]()|
 | tufsteen | [https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5]() |
 | kalksteen | [https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53]() |
 | keien | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
+| kloostermop | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
+| ijsselsteen | [https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9() |
 | zandsteen | [https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d]() |
 
 Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien specifieker (Kloostermop, Doornikse steen, Bentheimer zandsteen) of anders.
@@ -326,8 +403,7 @@ Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien s
 
 ### Opmerking over constructie
 
-Nadere beschrijving constructie, bijvoorbeeld de baksteen en is een kloostermop
-Linken met erfgoedthesaurus
+Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander soort constructie dan bovenkant
 
 ### Schildertechniek
 
@@ -355,7 +431,7 @@ keuzelijst:
 
 keuzelijst:
 - temperaverf, ei of caseine
-- (lij)nolie
+- (lijn)olie
 - lijm
 - kalkwater
 - overig
@@ -368,6 +444,8 @@ keuzelijst:
 | in grote mate |
 | in mindere mate |
 | onbetekenend |
+
+Of aangeven in percentages?
 
 
 ### (Vocht)vlekken
