@@ -393,7 +393,7 @@ Kies één van de volgende termen:
 
 Laat leeg indien 'onbepaald'
 
-### Verfijning_constructie
+### verfijning_constructie
 
 | term | cultuurhistorische thesaurus |
 | ---- | ---------------------------- |
@@ -409,11 +409,11 @@ Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien s
 
 
 
-### Opmerking over constructie
+### opmerking over constructie
 
 Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander soort constructie dan bovenkant
 
-### Schildertechniek
+### schildertechniek
 
 Kies één van de volgende termen:
 
@@ -427,7 +427,7 @@ Kies één van de volgende termen:
 | kalkschildering | |
 
 
-### Grondlaag
+### grondlaag
 
 keuzelijst:
 - kalk
@@ -435,7 +435,7 @@ keuzelijst:
 - pleister
 - overig
 
-### Bindmiddelen
+### bindmiddelen
 
 keuzelijst:
 - temperaverf, ei of caseine
@@ -444,7 +444,9 @@ keuzelijst:
 - kalkwater
 - overig
 
-### Schade door vervuiling
+### schade door vervuiling
+
+Kies een categorie
 
 | categorie |
 | :-------- |
@@ -456,7 +458,7 @@ keuzelijst:
 Of aangeven in percentages?
 
 
-### (Vocht)vlekken
+### (vocht)vlekken
 
 | categorie |
 | :-------- |
@@ -465,53 +467,7 @@ Of aangeven in percentages?
 | in mindere mate |
 | onbetekenend |
 
-### Micro bacteriele activiteit
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-
-### Schade door zout
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### Pleisterschade
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### Scheuren
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### Beschadiging in verf en onderliggende lagen
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### Verkleuring
+### micro bacteriele activiteit
 
 | categorie |
 | :-------- |
@@ -521,13 +477,62 @@ Of aangeven in percentages?
 | onbetekenend |
 
 
-### Opmerkingen betreffende schade
+### schade door zout
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+### pleisterschade
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+### scheuren
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+### beschadiging in verf en onderliggende lagen
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+### verkleuring
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+
+### opmerkingen betreffende schade
 
 Nadere beschrijving schade
 
-### Datum notatie schade
+### datum notatie schade
 
 ../../....
+
+
+
 
 
 ## Bedreigende gebeurtenissen
@@ -535,11 +540,26 @@ Nadere beschrijving schade
 [bedreigende gebeurtenissen.csv]() bevat de volgende velden:
 
 
-### Lekkage locatie
+### monument-id
+Vul hier het id van het gebouw in
 
-Locatie-aanduiding waar de lekkage is geweest
+### muurschildering-id
+vul hier het id nummer van de muurschildering in
 
-### Ernst lekkage
+### soort_gebeurtenis
+
+| keuzelijst |
+| :-------- |
+| aardbeving |
+| brand |
+| lekkage |
+| overstroming |
+
+
+### locatie
+waar in het gebouw is de bedreigende gebeurtenis
+
+### ernst_bedreigende_gebeurtenis
 
 keuzelijst:
 - heel ernstig
@@ -547,54 +567,79 @@ keuzelijst:
 - behoorlijk
 - beetje
 
-### Beschrijving lekkage
+### beschrijving_bedreigende_gebeurtenis
 
-Beschrijving van de lekkage
+Beschrijving van de bedreigende gebeurtenis
 
-### Datum lekkage
-
-../../....
-
-### Datum aardbeving
+### datum_bedreigende_gebeurtenis
 
 ../../....
 
-### Schadebeschrijving
 
-Beschrijving wat voor en waar de schade is
+
+
+
+
+## Afbeeldingen
+[afbeeldingen.csv]() bevat de volgende velden:
+
+### monument_id
+id van het gebouw, het rijksmonumentnummer
+
+### muurschildering_id
+
+De identifier van de muurschildering, zie [muurschilderingen.csv]. 
+
+### jaartal_foto
+
+Wanneer is de afbeelding gemaakt?
+
+### link
+Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende muurschildering of gebouw
+
+
+
+
 
 
 ## Bronnen
 [bronnen.csv]() bevat de volgende velden:
 
-### gebouw
+### monument_id
 De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
 
-### muurschildering
+### muurschildering_id
 
 De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
 
-### bron
+### links
 Dit kan een wikidata item zijn, maar ook een link naar een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
 ### Fysieke loactie
 Indien niet digitaal, waar is de bron te raadplegen?
 
 
-## Afbeeldingen
-[afbeeldingen.csv]() bevat de volgende velden:
 
-### Monumentnummer
-id van het gebouw, het rijksmonumentnummer
+## Literatuur
+[literatuur.csv}() bevat de volgende velden:
 
-### Muurschildering id
+### monument_id
+De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
 
-De identifier van de muurschildering, zie [muurschilderingen.csv]. 
+### muurschildering_id
 
-### Jaartal foto
+De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
 
-Wanneer is de afbeelding gemaakt?
+### auteur
 
-### Link
-Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende muurschildering of gebouw
+### titel
 
+### tijdschrifttitel
+
+### tijdschrift_jaar_nummer
+
+### jaartal
+
+### plaats van uitgave
+
+### pagina's
