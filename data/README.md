@@ -5,10 +5,14 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [gebouwen](#Gebouwen)
 - [muurschilderingen-overzicht](#muurschilderingen-overzicht)
 - [muurschilderingen](#Muurschilderingen)
+- [kunsthistorisch](#Kunsthistorisch)
 - [materiaaltechnisch](#Materiaaltechnisch)
 - [kunsthistorisch](#Kunsthistorisch)
+- [restauraties](#Restauraties)
 - [bedreigende-gebeurtenissen](#bedreigende-gebeurtenissen)
 - [afbeeldingen](#Afbeeldingen)
+- [Bronnen_links](#Bronnen-links)
+- [literatuur](#Literatuur)
 
 
 
