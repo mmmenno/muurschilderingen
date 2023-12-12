@@ -14,9 +14,9 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [bronnen_links](#Bronnen-links)
 - [literatuurverwijzing](#Literatuurverwijzing)
 
-Eerst nog een algemene opmerking inzake bronnen. In het bestand [bronnen.csv](bronnen.csv) kunnen links naar bronnen bij gebouwen _en/of_ muurschilderingen opgenomen worden.
+Eerst nog een algemene opmerking inzake bronnen. Onder [bronnen_links](#Bronnen-links) zie je hoe je links naar bronnen bij gebouwen _en/of_ muurschilderingen op kunt nemen.
 
-Wil je een bron bij welk specifiek veld dan ook vermelden, bijvoorbeeld bij 'huidige_functie' of 'bouwgeschiedenis', doe dat dan door de tekst in het veld zelf te beëindigen met ` (bron:Qnummer)`, bijvoorbeeld ‘ (bron:Q55968573)’, waarbij het Qnummer het Wikidata item van de bron (boek of artikel) is. Wil je daarbij een paginanummer vermelden, schrijf dan bijvoorbeeld ‘ (bron:Q55968573;77)’.
+Wil je een bron bij welk specifiek veld dan ook vermelden, bijvoorbeeld bij 'huidige_functie' of 'bouwgeschiedenis', doe dat dan door de tekst in het veld zelf te beëindigen met ` (bron:Qnummer)`, bijvoorbeeld ` (bron:Q55968573)`, waarbij het Qnummer het Wikidata item van de bron (boek of artikel) is. Wil je daarbij een paginanummer vermelden, schrijf dan bijvoorbeeld ` (bron:Q55968573;77)`.
 
 Als een boek artikel niet op Wikidata bekend is, kan je dat daar toevoegen - [voorbeeld boek](https://www.wikidata.org/wiki/Q122982902), [voorbeeld artikel](https://www.wikidata.org/wiki/Q55968573).
 
@@ -241,23 +241,23 @@ Verhalend, Personen en wezens, Allegorieen
 
 Geef een Wikidata Qnummer, bijvoorbeeld van een artistiek thema of bijbelverhaal. Ook evangelisten, dieren, objecten, etc. zijn op Wikidata te vinden.
 
-Een overzicht van artistieke thema's vind je op [https://w.wiki/8RLS](https://w.wiki/8RLS)
-Een overzicht van bijbelverhalen vind je op [https://w.wiki/8RLV]()
+Een overzicht van artistieke thema's vind je op <https://w.wiki/8RLS>
+Een overzicht van bijbelverhalen vind je op <https://w.wiki/8RLV>
 
 
 #### motief_ornamentiek
 
 | term | cultuurhistorische thesaurus | aat |
 | :--- | :--------------------------- | :-- |
-| cartouche |  | [https://vocab.getty.edu/aat/300010256]() |
-| bloem |  | [https://vocab.getty.edu/aat/300375563]() |
-| geometrisch motief |  | [https://vocab.getty.edu/aat/300009764]() |
-| lint |  | [https://vocab.getty.edu/aat/300387440]() |
-| trappatroon |  | [https://vocab.getty.edu/aat/300010229]() |
-| meander |  | [https://vocab.getty.edu/aat/300165279]() |
-| palmette |  | [https://vocab.getty.edu/aat/300009995]() |
-| plantmotief |  | [https://vocab.getty.edu/aat/300164599]() |
-| ster |  | [https://vocab.getty.edu/aat/300009811]() |
+| cartouche |  | <https://vocab.getty.edu/aat/300010256> |
+| bloem |  | <https://vocab.getty.edu/aat/300375563> |
+| geometrisch motief |  | <https://vocab.getty.edu/aat/300009764> |
+| lint |  | <https://vocab.getty.edu/aat/300387440> |
+| keperband |  | <https://vocab.getty.edu/aat/300165028> |
+| meander |  | <https://vocab.getty.edu/aat/300165279> |
+| palmette |  | <https://vocab.getty.edu/aat/300009995> |
+| plantmotief |  | <https://vocab.getty.edu/aat/300164599> |
+| ster |  | <https://vocab.getty.edu/aat/300009811> |
 
 Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI. Zoek bijvoorbeeld binnen de lijst [patroon (ontwerpelementen)](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300010108) of [motieven](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300009700).
 
@@ -265,11 +265,11 @@ Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI
 
 | term | cultuurhistorische thesaurus | aat |
 | :--- | :--------------------------- | :-- |
-| inscripties |  | [https://vocab.getty.edu/aat/300028702]() |
+| inscripties |  | <https://vocab.getty.edu/aat/300028702> |
 | keurmerken |  |  |
-| merkteken |  | [https://vocab.getty.edu/aat/300028744]() |
-| wapenschilden | [https://data.cultureelerfgoed.nl/term/id/cht/c58475d5-0795-4623-b4be-ea1524f4b4fb]() | [https://vocab.getty.edu/aat/300138227]() |
-| wijdingskruisen |  | [https://vocab.getty.edu/aat/300395632]() |
+| merkteken |  | <https://vocab.getty.edu/aat/300028744> |
+| wapenschilden | <https://data.cultureelerfgoed.nl/term/id/cht/c58475d5-0795-4623-b4be-ea1524f4b4fb> | <https://vocab.getty.edu/aat/300138227> |
+| wijdingskruisen |  | <https://vocab.getty.edu/aat/300395632> |
 
   
     
@@ -289,10 +289,12 @@ Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering
 Het bestand [bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
 
 #### gebouwid
-id van het gebouw
 
-#### muurschildering_id
-id van de muurschildering
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'. Niet verplicht indien een muurschilderingid is opgegeven.
+
+#### muurschilderingid
+
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv). Niet verplicht indien een gebouwid is opgegeven.
 
 #### soort_gebeurtenis
 
@@ -324,12 +326,12 @@ Geef de ernst  aan op de volgende schaal:
 25-0 % : gering
 -->
 
-#### beschrijving bedreigende gebeurtenis
+#### beschrijving_gebeurtenis
 Beschrijf de bedreigende gebeurtenis
 
-#### datum bedreigende gebeurtenis
+#### datum_gebeurtenis
 
-`dd-mm-jjjj`
+De datum van de bedreigende gebeurtenis, in het formaat `dd-mm-jjjj`.
 
 
 
@@ -337,13 +339,19 @@ Beschrijf de bedreigende gebeurtenis
 
 [restauraties.csv] () bevat de volgende velden:
 
-#### monument_id
-id nummer van het gebouw
+#### gebouwid
+
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'.
 
 
-#### jaartallen restauratie
+#### begin_restauratie
 
-.... - ....
+Het beginjaar, als `jjjj`.
+
+
+#### einde_restauratie
+
+Het eindjaar, als `jjjj`.
 
 
 #### bijbehorende restaurator
@@ -356,7 +364,7 @@ Wat was / is belangrijkste activiteit geweest
 Vrij invoerveld of keuzelijst van maken?
 
 
-#### beschrijving restauratie
+#### beschrijving_restauratie
 
 Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
 
@@ -369,11 +377,11 @@ Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale 
 
 ## Materiaaltechnisch
 
-[materiaaltechnisch.csv]() bevat de volgende velden:
+[materiaaltechnisch.csv> bevat de volgende velden:
 
 #### muurschildering_id
 
-Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv>
 
 #### hoogte
 
@@ -385,27 +393,18 @@ De breedte van de muurschildering in centimeters
 
 #### constructie
 
-Kies één van de volgende termen:
-
-| keuze |
-| ----- |
-| baksteen | [https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac]()|
-| beton | [https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7]() |
-| natuursteen | [https://data.cultureelerfgoed.nl/term/id/cht/41febb28-264d-4b64-a6ef-5716e43c0154]() |
-
-Laat leeg indien 'onbepaald'
-
-#### verfijning_constructie
-
 | term | cultuurhistorische thesaurus |
 | ---- | ---------------------------- |
-| graniet | [https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f]()|
-| tufsteen | [https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5]() |
-| kalksteen | [https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53]() |
-| keien | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
-| kloostermop | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
-| ijsselsteen | [https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9]() |
-| zandsteen | [https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d]() |
+| baksteen | <https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac>|
+| beton | <https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7> |
+| natuursteen | <https://data.cultureelerfgoed.nl/term/id/cht/41febb28-264d-4b64-a6ef-5716e43c0154> |
+| graniet | <https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f>|
+| tufsteen | <https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5> |
+| kalksteen | <https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53> |
+| keien | <https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988> |
+| kloostermop | <https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988> |
+| ijsselsteen | <https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9> |
+| zandsteen | <https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d> |
 
 Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien specifieker (Kloostermop, Doornikse steen, Bentheimer zandsteen) of anders.
 
@@ -420,22 +419,24 @@ Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander so
 Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus |
-| ---- | ---------------------------- |
-| graffiti | [https://data.cultureelerfgoed.nl/term/id/cht/f302aa2a-05cf-4994-9ae9-118639374bb2]() |
-| fresco | [https://data.cultureelerfgoed.nl/term/id/cht/551d2fbc-c358-4229-aca8-320bdfacdcd7]() |
-| secco | [https://data.cultureelerfgoed.nl/term/id/cht/c7c593d5-2b94-4413-be91-0d98984458af]() |
+| :--- | :--------------------------- |
+| graffiti | <https://data.cultureelerfgoed.nl/term/id/cht/f302aa2a-05cf-4994-9ae9-118639374bb2> |
+| fresco | <https://data.cultureelerfgoed.nl/term/id/cht/551d2fbc-c358-4229-aca8-320bdfacdcd7> |
+| secco | <https://data.cultureelerfgoed.nl/term/id/cht/c7c593d5-2b94-4413-be91-0d98984458af> |
 | keim | |
-| tekening | [https://data.cultureelerfgoed.nl/term/id/cht/eb9e1e5b-b319-4519-a4f5-0dd26dbf4524]() |
+| tekening | <https://data.cultureelerfgoed.nl/term/id/cht/eb9e1e5b-b319-4519-a4f5-0dd26dbf4524> |
 | kalkschildering | |
 
 
 #### grondlaag
 
-keuzelijst:
-- kalk
-- kalk op pleister
-- pleister
-- overig
+| term | cultuurhistorische thesaurus |
+| :--- | :--------------------------- |
+| kalk | [> |
+| kalk op pleister | [> |
+| pleister | <https://data.cultureelerfgoed.nl/term/id/cht/1a289d6b-fbdc-4888-a953-4c046f16c89e> |
+| overig |  |
+
 
 #### bindmiddelen
 
@@ -539,7 +540,7 @@ Nadere beschrijving schade
 
 ## Bedreigende gebeurtenissen
 
-[bedreigende gebeurtenissen.csv]() bevat de volgende velden:
+[bedreigende gebeurtenissen.csv> bevat de volgende velden:
 
 
 #### monument-id
@@ -583,7 +584,7 @@ Beschrijving van de bedreigende gebeurtenis
 
 
 ## Afbeeldingen
-[afbeeldingen.csv]() bevat de volgende velden:
+[afbeeldingen.csv> bevat de volgende velden:
 
 #### monument_id
 id van het gebouw, het rijksmonumentnummer
@@ -605,14 +606,14 @@ Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende m
 
 
 ## Bronnen_links
-[bronnen.csv]() bevat de volgende velden:
+[bronnen.csv> bevat de volgende velden:
 
 #### monument_id
-De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
+De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv>.
 
 #### muurschildering_id
 
-De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
+De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv>. 
 
 #### links
 Dit kan een wikidata item zijn, maar ook een link naar een webpagina waar het gebouw of de muurschildering beschreven wordt.
@@ -626,11 +627,11 @@ Indien niet digitaal, waar is de bron te raadplegen?
 [literatuurverwijzing.csv}() bevat de volgende velden:
 
 #### monument_id
-De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
+De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv>.
 
 #### muurschildering_id
 
-De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
+De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv>. 
 
 #### auteur
 
