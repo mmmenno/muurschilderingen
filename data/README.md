@@ -62,7 +62,7 @@ Het jaar sinds wanneer het verwarming-type gebruikt wordt.
 #### bouwgeschiedenis
 Opsomming korte beschrijving met aanduiding periodes / jaartallen bouwgeschiedenis
 
-#### bron bouwgeschiedenis
+#### TODO: bron bouwgeschiedenis
 Verwijzing naar boeken, artikelen, personen waar informatie vandaag komt
 
 #### restauratiegeschiedenis
@@ -72,10 +72,10 @@ Korte beschrijving met aanduiding periodes / jaartallen restauraties
 Korte beschrijving van scheurvorming, verzakkingen, lekkage mbt eventuele schade muurschilderingen.
 Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
 
-#### ingevoerd door:
+#### ingevoerd_door:
 Naam invoerder informatie over restaturatiegeschiedenis en schadegeschiedenis
 
-#### bron restauratie- en schadegeschiedenis
+#### TODO: bron restauratie- en schadegeschiedenis
 Eventuele verwijzing naar restauratie- of bouwhistorisch verslag of publicatie
 
 
