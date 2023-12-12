@@ -17,33 +17,33 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 
 ## Gebouwen
 
-[gebouwen.csv]() bevat de volgende velden:
+[gebouwen.csv](gebouwen.csv) bevat de volgende velden:
 
-### id
+#### id
 
 De identifier van een gebouw. Gebruik 'RM' + rijksmonumentnummer voor rijksmonumenten, gebruik 'BAG' + Bag pand id voor overige gebouwen.
 
-### monumentnummer
+#### monumentnummer
 
 Het rijksmonumentnummer.
 
-### wikidata
+#### wikidata
 
 Het wikidata Qnummer van het gebouw, bijvoorbeeld 'Q2618966'.
 
-### naam
+#### naam
 
 De naam van het gebouw.
 
-### huidige_functie
+#### huidige_functie
 
 De huidige hoofdfunctie van het gebouw.
 
-### ~~patrocinium~~
+#### ~~patrocinium~~
 
 Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de property [P417](https://www.wikidata.org/wiki/Property:P417) (patroonheilige). Op deze [lijst met rijksmonumentale kerken met patroonheilige](https://w.wiki/8QcW) zie je van welke kerken dat al gedaan is.
 
-### type_verwarming
+#### type_verwarming
 
 | kies optie |
 | ----------- |
@@ -55,27 +55,27 @@ Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de 
 | vloerverwarming |
 | overig |
 
-### type\_verwarming\_sinds
+#### type\_verwarming\_sinds
 
 Het jaar sinds wanneer het verwarming-type gebruikt wordt.
 
-### bouwgeschiedenis
+#### bouwgeschiedenis
 Opsomming korte beschrijving met aanduiding periodes / jaartallen bouwgeschiedenis
 
-### bron bouwgeschiedenis
+#### bron bouwgeschiedenis
 Verwijzing naar boeken, artikelen, personen waar informatie vandaag komt
 
-### restauratiegeschiedenis
+#### restauratiegeschiedenis
 Korte beschrijving met aanduiding periodes / jaartallen restauraties
 
-### schadegeschiedenis
+#### schadegeschiedenis
 Korte beschrijving van scheurvorming, verzakkingen, lekkage mbt eventuele schade muurschilderingen.
 Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
 
-### ingevoerd door:
+#### ingevoerd door:
 Naam invoerder informatie over restaturatiegeschiedenis en schadegeschiedenis
 
-### bron restauratie- en schadegeschiedenis
+#### bron restauratie- en schadegeschiedenis
 Eventuele verwijzing naar restauratie- of bouwhistorisch verslag of publicatie
 
 
@@ -84,25 +84,25 @@ Eventuele verwijzing naar restauratie- of bouwhistorisch verslag of publicatie
 
 ## Muurschilderingen overzicht
 
-De tabel [muurschilderingen-overzicht.csv]() is bedoeld om per gebouw alle muurschilderingen samen kort te beschrijven en iets te zeggen over conditie en waardestelling van het geheel aan muurschilderingen. De csv bevat de volgende velden:
+De tabel [muurschilderingen-overzicht.csv](muurschilderingen-overzicht.csv) is bedoeld om per gebouw alle muurschilderingen samen kort te beschrijven en iets te zeggen over conditie en waardestelling van het geheel aan muurschilderingen. De csv bevat de volgende velden:
 
-### gebouwid
+#### gebouwid
 
-De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](), bijvoorbeeld 'RM8247'.
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'.
 
-### beschrijving
+#### beschrijving
 
 Een algemene beschrijving van de soorten muurschilderingen in verschillende periodes
 
-### beschrijving_bron
+#### beschrijving_bron
 
 Bron van de algemene beschrijving of naam van de persoon die de beschrijving heeft gemaakt. Als de bron een op Wikidata beschreven boek, persoon, etc. is, gebruik dan het Wikidata Qnummer.
 
-### literatuur
+#### literatuur
 
 Literatuurverwijzingen uit bron
 
-### culturele_waardestelling
+#### culturele_waardestelling
 
 | categorie | uitleg |
 | :-------- | :----- |
@@ -111,7 +111,7 @@ Literatuurverwijzingen uit bron
 | behoudenswaardig | regionaal van belang |
 | enigszins behoudenswaardig | plaatselijk van belang |
 
-### beoordeling\_staat\_conditie
+#### beoordeling\_staat\_conditie
 
 | categorie |
 | :-------- |
@@ -120,7 +120,7 @@ Literatuurverwijzingen uit bron
 | mogelijke behandeling |
 | conditie bevredigend |
 
-### aanbeveling\_restauratie\_consolidatie
+#### aanbeveling\_restauratie\_consolidatie
 
 | categorie |
 | :-------- |
@@ -129,15 +129,15 @@ Literatuurverwijzingen uit bron
 | gemiddelde prioriteit |
 | lage prioriteit |
 
-### beschrijving\_staat\_conditie
+#### beschrijving\_staat\_conditie
 
 Beschrijving van huidige staat / conditie muurschildering.
 
-### laatste_conditiebeschrijving
+#### laatste_conditiebeschrijving
 
 Datum van de laatste conditiebeschrijving, als `dd-mm-jjjj`
 
-### beoordelaar
+#### beoordelaar
 
 Naam van het bedrijf dat / de restaurator die de beoordeling gedaan heeft.
 
@@ -149,33 +149,37 @@ Naam van het bedrijf dat / de restaurator die de beoordeling gedaan heeft.
 
 ## Muurschilderingen
 
-De tabel [muurschilderingen.csv]() beschrijft elke muurschildering afzonderlijk en bevat de volgende velden:
+De tabel [muurschilderingen.csv](muurschilderingen.csv) beschrijft elke muurschildering afzonderlijk en bevat de volgende velden:
 
-### muurschildering_id
+#### id
 
 De identifier van de muurschildering. Gebruik het gebouwid + 'MU' + nummer. Logischerwijs begint de nummering bij 1 en is die oplopend.
 
-### positie
+#### gebouwid
+
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'.
+
+#### positie
 
 Het nummer waarmee de positie aangegeven wordt in het schema, bijv. '11' of '11b'.
 
-### titel
+#### titel
 
 Titel of korte aanduiding van de muurschildering.
 
-### volgnr
+#### volgnr
 
 Nummer, gebruikt om op te sorteren.
 
-### ruimte
+#### ruimte
 
 Locatie in het gebouw van de muurschildering. Voorbeelden: 'eerste travee', 'tweede travee', 'gewelf koortravee en koorsluiting', 'koor', 'triomfboog'.
  
-### locatie\_in\_ruimte
+#### locatie\_in\_ruimte
 
 Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zuidwand', 'noord- en zuidzijde'.
 
-### orientatie_nozw
+#### orientatie_nozw
 
 | keuze |
 | ----- |
@@ -195,39 +199,44 @@ Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zu
 
 
 ## Kunsthistorisch
-[kunsthistorisch.csv]() bevat de volgende velden:
+[kunsthistorisch.csv](kunsthistorisch.csv) bevat de volgende velden:
 
-### muurschildering_id
+#### muurschilderingid
 
-Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
 
-### beschrijving
+#### beschrijving
 
 Kunsthistorische beschrijving muurschildering.
 
-### vervaardiger
+#### vervaardiger
 
-RKDartist URI (bijv. `https://rkd.nl/explore/artists/72909`) of Wikidata Qnummer van de maker van de muurschildering.
+Bij voorkeur RKDartist URI (bijv. `https://rkd.nl/explore/artists/72909`), anders Wikidata Qnummer van de maker van de muurschildering.
 
-### datering_vroegst
+#### datering_vroegst
 
 Jaartal `jjjj` van de vroegst mogelijke vervaardigingsdatum, '1300' als het werk in het eerste kwart van de 14e eeuw is vervaardigd.
 
-### datering_laatst
+#### datering_laatst
 
 Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk in het eerste kwart van de 14e eeuw is vervaardigd.
 
-### datering_opmerking
+#### datering_opmerking
 
 Eventuele extra informatie over datering
 
-### bron_kunsthist 1
-Vermeld de bron(nen) van voorgaande ingevoerde informatie
+#### motief_opmerking
 
-### bron_kunsthist 2
-Vermeld de bron(nen) van voorgaande ingevoerde informatie
+Eventuele extra informatie over datering
 
-### motief_thema
+#### TBD: bronnen
+TBD: bij welke velden moet een bron vermeld kunnen worden (bij allemaal?) en is een Wikidata Qnummer van een bron afdoende? Er is ook een tabel bronnen, waarin bronnen aan een gebouw of muurschildering gekoppeld kunnen worden.
+
+[voorbeeld boek](https://www.wikidata.org/wiki/Q122982902), [voorbeeld artikel](https://www.wikidata.org/wiki/Q55968573)
+
+
+#### motief_thema
+<!--
 
 | keuze |
 | ----- |
@@ -238,17 +247,19 @@ Vermeld de bron(nen) van voorgaande ingevoerde informatie
 | verhalend |
 
 
-### motief_thema_specifiek
+#### motief_thema_specifiek
+
 
 Verhalend, Personen en wezens, Allegorieen
+-->
 
-Geef een Wikidata Qnummer van een artistiek thema of bijbelverhaal.
+Geef een Wikidata Qnummer, bijvoorbeeld van een artistiek thema of bijbelverhaal. Ook evangelisten, dieren, objecten, etc. zijn op Wikidata te vinden.
 
-Een overzicht van artistieke thema's vind je op [https://w.wiki/8RLS]()
+Een overzicht van artistieke thema's vind je op [https://w.wiki/8RLS](https://w.wiki/8RLS)
 Een overzicht van bijbelverhalen vind je op [https://w.wiki/8RLV]()
 
 
-### motief_ornamentiek
+#### motief_ornamentiek
 
 | term | cultuurhistorische thesaurus | aat |
 | ---- | ---------------------------- | --- |
@@ -272,7 +283,7 @@ Een overzicht van bijbelverhalen vind je op [https://w.wiki/8RLV]()
 
 Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI. Zoek bijvoorbeeld binnen de lijst [patroon (ontwerpelementen)](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300010108) of [motieven](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300009700).
 
-### motief_tekens
+#### motief_tekens
 
 | term | cultuurhistorische thesaurus | aat |
 | ---- | ---------------------------- | --- |
@@ -284,28 +295,28 @@ Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI
 
   
     
-### motief_opmerking
+#### motief_opmerking
 
 Eventuele nadere opmerking 
 
-### Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering
+#### restauratie_kunsthistorisch
 
-Zijn bijvoorbeeld bepaalde lagen van een schildering bijvoorbeeld verwijderd of juist overschilderd.
+Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering. Zijn bijvoorbeeld bepaalde lagen van een schildering bijvoorbeeld verwijderd of juist overschilderd.
 
 
 
 
 
 ## Bedreigende gebeurtenissen
-[bedreigende-gebeurtenissen]() bevat de volgende velden:
+[bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
 
-### monumentnummer_id
+#### gebouwid
 id van het gebouw
 
-### muurschildering_id
+#### muurschildering_id
 id van de muurschildering
 
-### soort_gebeurtenis
+#### soort_gebeurtenis
 
 | keuze |
 | ----- |
@@ -315,20 +326,28 @@ id van de muurschildering
 | overstroming |
 
 
-### locatie
+#### locatie
 Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
 
-### ernst bedreigende gebeurtenis
+#### ernst bedreigende gebeurtenis
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
 Geef de ernst  aan op de volgende schaal:
 100-75 % : zeer ernstig
 75-50 % : ernstig
 50-25 % : behoorlijk
 25-0 % : gering
 
-### beschrijving bedreigende gebeurtenis
+#### beschrijving bedreigende gebeurtenis
 Beschrijf de bedreigende gebeurtenis
 
-### datum bedreigende gebeurtenis
+#### datum bedreigende gebeurtenis
 
 ../../....
 
@@ -338,30 +357,30 @@ Beschrijf de bedreigende gebeurtenis
 
 [restauraties.csv] () bevat de volgende velden:
 
-### monument_id
+#### monument_id
 id nummer van het gebouw
 
 
-### jaartallen restauratie
+#### jaartallen restauratie
 
 .... - ....
 
 
-### bijbehorende restaurator
+#### bijbehorende restaurator
 
 Naam bedrijf / restaurator
 
-### activiteit
+#### activiteit
 
 Wat was / is belangrijkste activiteit geweest
 Vrij invoerveld of keuzelijst van maken?
 
 
-### beschrijving restauratie
+#### beschrijving restauratie
 
 Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
 
-### restauratieverslagen
+#### restauratieverslagen
 
 Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale locatie.
 
@@ -372,19 +391,19 @@ Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale 
 
 [materiaaltechnisch.csv]() bevat de volgende velden:
 
-### muurschildering_id
+#### muurschildering_id
 
 Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv]()
 
-### hoogte
+#### hoogte
 
 De hoogte van de muurschildering in centimeters
 
-### breedte
+#### breedte
 
 De breedte van de muurschildering in centimeters
 
-### constructie
+#### constructie
 
 Kies één van de volgende termen:
 
@@ -396,7 +415,7 @@ Kies één van de volgende termen:
 
 Laat leeg indien 'onbepaald'
 
-### verfijning_constructie
+#### verfijning_constructie
 
 | term | cultuurhistorische thesaurus |
 | ---- | ---------------------------- |
@@ -405,18 +424,18 @@ Laat leeg indien 'onbepaald'
 | kalksteen | [https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53]() |
 | keien | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
 | kloostermop | [https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988]() |
-| ijsselsteen | [https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9() |
+| ijsselsteen | [https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9]() |
 | zandsteen | [https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d]() |
 
 Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien specifieker (Kloostermop, Doornikse steen, Bentheimer zandsteen) of anders.
 
 
 
-### opmerking over constructie
+#### opmerking over constructie
 
 Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander soort constructie dan bovenkant
 
-### schildertechniek
+#### schildertechniek
 
 Kies één van de volgende termen:
 
@@ -430,7 +449,7 @@ Kies één van de volgende termen:
 | kalkschildering | |
 
 
-### grondlaag
+#### grondlaag
 
 keuzelijst:
 - kalk
@@ -438,7 +457,7 @@ keuzelijst:
 - pleister
 - overig
 
-### bindmiddelen
+#### bindmiddelen
 
 keuzelijst:
 - temperaverf, ei of caseine
@@ -447,7 +466,7 @@ keuzelijst:
 - kalkwater
 - overig
 
-### schade door vervuiling
+#### schade door vervuiling
 
 Kies een categorie
 
@@ -461,7 +480,7 @@ Kies een categorie
 Of aangeven in percentages?
 
 
-### (vocht)vlekken
+#### (vocht)vlekken
 
 | categorie |
 | :-------- |
@@ -470,53 +489,7 @@ Of aangeven in percentages?
 | in mindere mate |
 | onbetekenend |
 
-### micro bacteriele activiteit
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-
-### schade door zout
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### pleisterschade
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### scheuren
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### beschadiging in verf en onderliggende lagen
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-### verkleuring
+#### micro bacteriele activiteit
 
 | categorie |
 | :-------- |
@@ -526,11 +499,57 @@ Of aangeven in percentages?
 | onbetekenend |
 
 
-### opmerkingen betreffende schade
+#### schade door zout
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+#### pleisterschade
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+#### scheuren
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+#### beschadiging in verf en onderliggende lagen
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+#### verkleuring
+
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
+
+
+#### opmerkingen betreffende schade
 
 Nadere beschrijving schade
 
-### datum notatie schade
+#### datum notatie schade
 
 ../../....
 
@@ -543,13 +562,13 @@ Nadere beschrijving schade
 [bedreigende gebeurtenissen.csv]() bevat de volgende velden:
 
 
-### monument-id
+#### monument-id
 Vul hier het id van het gebouw in
 
-### muurschildering-id
+#### muurschildering-id
 vul hier het id nummer van de muurschildering in
 
-### soort_gebeurtenis
+#### soort_gebeurtenis
 
 | keuzelijst |
 | :-------- |
@@ -559,10 +578,10 @@ vul hier het id nummer van de muurschildering in
 | overstroming |
 
 
-### locatie
+#### locatie
 waar in het gebouw is de bedreigende gebeurtenis
 
-### ernst_bedreigende_gebeurtenis
+#### ernst_bedreigende_gebeurtenis
 
 keuzelijst:
 - heel ernstig
@@ -570,11 +589,11 @@ keuzelijst:
 - behoorlijk
 - beetje
 
-### beschrijving_bedreigende_gebeurtenis
+#### beschrijving_bedreigende_gebeurtenis
 
 Beschrijving van de bedreigende gebeurtenis
 
-### datum_bedreigende_gebeurtenis
+#### datum_bedreigende_gebeurtenis
 
 ../../....
 
@@ -586,18 +605,18 @@ Beschrijving van de bedreigende gebeurtenis
 ## Afbeeldingen
 [afbeeldingen.csv]() bevat de volgende velden:
 
-### monument_id
+#### monument_id
 id van het gebouw, het rijksmonumentnummer
 
-### muurschildering_id
+#### muurschildering_id
 
 De identifier van de muurschildering, zie [muurschilderingen.csv]. 
 
-### jaartal_foto
+#### jaartal_foto
 
 Wanneer is de afbeelding gemaakt?
 
-### link
+#### link
 Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende muurschildering of gebouw
 
 
@@ -608,17 +627,17 @@ Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende m
 ## Bronnen_links
 [bronnen.csv]() bevat de volgende velden:
 
-### monument_id
+#### monument_id
 De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
 
-### muurschildering_id
+#### muurschildering_id
 
 De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
 
-### links
+#### links
 Dit kan een wikidata item zijn, maar ook een link naar een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
-### Fysieke loactie
+#### Fysieke loactie
 Indien niet digitaal, waar is de bron te raadplegen?
 
 
@@ -626,23 +645,23 @@ Indien niet digitaal, waar is de bron te raadplegen?
 ## Literatuurverwijzing
 [literatuurverwijzing.csv}() bevat de volgende velden:
 
-### monument_id
+#### monument_id
 De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv]().
 
-### muurschildering_id
+#### muurschildering_id
 
 De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv](). 
 
-### auteur
+#### auteur
 
-### titel
+#### titel
 
-### tijdschrifttitel
+#### tijdschrifttitel
 
-### tijdschrift_jaar_nummer
+#### tijdschrift_jaar_nummer
 
-### jaartal
+#### jaartal
 
-### plaats van uitgave
+#### plaats van uitgave
 
-### pagina's
+#### pagina's
