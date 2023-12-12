@@ -14,10 +14,15 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [bronnen_links](#Bronnen-links)
 - [literatuurverwijzing](#Literatuurverwijzing)
 
+Eerst nog een algemene opmerking inzake bronnen. In het bestand [bronnen.csv](bronnen.csv) kunnen links naar bronnen bij gebouwen _en/of_ muurschilderingen opgenomen worden.
+
+Wil je een bron bij welk specifiek veld dan ook vermelden, bijvoorbeeld bij 'huidige_functie' of 'bouwgeschiedenis', doe dat dan door de tekst in het veld zelf te beëindigen met ` (bron:Qnummer)`, bijvoorbeeld ‘ (bron:Q55968573)’, waarbij het Qnummer het Wikidata item van de bron (boek of artikel) is. Wil je daarbij een paginanummer vermelden, schrijf dan bijvoorbeeld ‘ (bron:Q55968573;77)’.
+
+Als een boek artikel niet op Wikidata bekend is, kan je dat daar toevoegen - [voorbeeld boek](https://www.wikidata.org/wiki/Q122982902), [voorbeeld artikel](https://www.wikidata.org/wiki/Q55968573).
 
 ## Gebouwen
 
-[gebouwen.csv](gebouwen.csv) bevat de volgende velden:
+In [gebouwen.csv](gebouwen.csv) wordt het gebouw zelf beschreven. Het bestand bevat de volgende velden:
 
 #### id
 
@@ -62,9 +67,6 @@ Het jaar sinds wanneer het verwarming-type gebruikt wordt.
 #### bouwgeschiedenis
 Opsomming korte beschrijving met aanduiding periodes / jaartallen bouwgeschiedenis
 
-#### TODO: bron bouwgeschiedenis
-Verwijzing naar boeken, artikelen, personen waar informatie vandaag komt
-
 #### restauratiegeschiedenis
 Korte beschrijving met aanduiding periodes / jaartallen restauraties
 
@@ -74,10 +76,6 @@ Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
 
 #### ingevoerd_door:
 Naam invoerder informatie over restaturatiegeschiedenis en schadegeschiedenis
-
-#### TODO: bron restauratie- en schadegeschiedenis
-Eventuele verwijzing naar restauratie- of bouwhistorisch verslag of publicatie
-
 
 
 
@@ -93,14 +91,6 @@ De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), b
 #### beschrijving
 
 Een algemene beschrijving van de soorten muurschilderingen in verschillende periodes
-
-#### beschrijving_bron
-
-Bron van de algemene beschrijving of naam van de persoon die de beschrijving heeft gemaakt. Als de bron een op Wikidata beschreven boek, persoon, etc. is, gebruik dan het Wikidata Qnummer.
-
-#### literatuur
-
-Literatuurverwijzingen uit bron
 
 #### culturele_waardestelling
 
@@ -169,7 +159,7 @@ Titel of korte aanduiding van de muurschildering.
 
 #### volgnr
 
-Nummer, gebruikt om op te sorteren.
+Nummer, vooralsnog alleen gebruikt in het prototype, om op te sorteren.
 
 #### ruimte
 
@@ -199,7 +189,8 @@ Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zu
 
 
 ## Kunsthistorisch
-[kunsthistorisch.csv](kunsthistorisch.csv) bevat de volgende velden:
+
+Het bestand [kunsthistorisch.csv](kunsthistorisch.csv) beschrijft datering, vervaardiger en motieven van de muurschildering. Het bevat de volgende velden:
 
 #### muurschilderingid
 
@@ -229,11 +220,6 @@ Eventuele extra informatie over datering
 
 Eventuele extra informatie over datering
 
-#### TBD: bronnen
-TBD: bij welke velden moet een bron vermeld kunnen worden (bij allemaal?) en is een Wikidata Qnummer van een bron afdoende? Er is ook een tabel bronnen, waarin bronnen aan een gebouw of muurschildering gekoppeld kunnen worden.
-
-[voorbeeld boek](https://www.wikidata.org/wiki/Q122982902), [voorbeeld artikel](https://www.wikidata.org/wiki/Q55968573)
-
 
 #### motief_thema
 <!--
@@ -262,19 +248,11 @@ Een overzicht van bijbelverhalen vind je op [https://w.wiki/8RLV]()
 #### motief_ornamentiek
 
 | term | cultuurhistorische thesaurus | aat |
-| ---- | ---------------------------- | --- |
-| Beslag en cartouche |  |  |
+| :--- | :--------------------------- | :-- |
 | cartouche |  | [https://vocab.getty.edu/aat/300010256]() |
-| Bloem, naturalistisch |  |  |
-| Bloem, stilistisch |  |  |
 | bloem |  | [https://vocab.getty.edu/aat/300375563]() |
-| Cirkel, vierkant, driehoek, ruit |  |  |
 | geometrisch motief |  | [https://vocab.getty.edu/aat/300009764]() |
-| Fruit en bessen |  |  |
-| Lint (gedraaid, gevlochten) |  |  |
 | lint |  | [https://vocab.getty.edu/aat/300387440]() |
-| Mens, dier en wezen |  |  |
-| Muizentrap |  |  |
 | trappatroon |  | [https://vocab.getty.edu/aat/300010229]() |
 | meander |  | [https://vocab.getty.edu/aat/300165279]() |
 | palmette |  | [https://vocab.getty.edu/aat/300009995]() |
@@ -286,7 +264,7 @@ Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI
 #### motief_tekens
 
 | term | cultuurhistorische thesaurus | aat |
-| ---- | ---------------------------- | --- |
+| :--- | :--------------------------- | :-- |
 | inscripties |  | [https://vocab.getty.edu/aat/300028702]() |
 | keurmerken |  |  |
 | merkteken |  | [https://vocab.getty.edu/aat/300028744]() |
@@ -308,7 +286,7 @@ Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering
 
 
 ## Bedreigende gebeurtenissen
-[bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
+Het bestand [bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
 
 #### gebouwid
 id van het gebouw
@@ -329,7 +307,7 @@ id van de muurschildering
 #### locatie
 Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
 
-#### ernst bedreigende gebeurtenis
+#### mate van ernst bedreigende gebeurtenis
 
 | categorie |
 | :-------- |
@@ -338,18 +316,20 @@ Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurteni
 | in mindere mate |
 | onbetekenend |
 
+<!--
 Geef de ernst  aan op de volgende schaal:
 100-75 % : zeer ernstig
 75-50 % : ernstig
 50-25 % : behoorlijk
 25-0 % : gering
+-->
 
 #### beschrijving bedreigende gebeurtenis
 Beschrijf de bedreigende gebeurtenis
 
 #### datum bedreigende gebeurtenis
 
-../../....
+`dd-mm-jjjj`
 
 
 
