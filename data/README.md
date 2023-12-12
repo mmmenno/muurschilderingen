@@ -381,7 +381,7 @@ Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale 
 
 #### muurschildering_id
 
-Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv>
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
 
 #### hoogte
 
@@ -586,12 +586,9 @@ Beschrijving van de bedreigende gebeurtenis
 ## Afbeeldingen
 [afbeeldingen.csv> bevat de volgende velden:
 
-#### monument_id
-id van het gebouw, het rijksmonumentnummer
-
 #### muurschildering_id
 
-De identifier van de muurschildering, zie [muurschilderingen.csv]. 
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
 
 #### jaartal_foto
 
@@ -613,36 +610,14 @@ De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv>.
 
 #### muurschildering_id
 
-De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv>. 
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
+
 
 #### links
 Dit kan een wikidata item zijn, maar ook een link naar een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
-#### Fysieke loactie
+#### Fysieke locatie
 Indien niet digitaal, waar is de bron te raadplegen?
 
 
 
-## Literatuurverwijzing
-[literatuurverwijzing.csv}() bevat de volgende velden:
-
-#### monument_id
-De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv>.
-
-#### muurschildering_id
-
-De identifier van de muurschildering zoals dat voorkomt in [muurschilderingen.csv>. 
-
-#### auteur
-
-#### titel
-
-#### tijdschrifttitel
-
-#### tijdschrift_jaar_nummer
-
-#### jaartal
-
-#### plaats van uitgave
-
-#### pagina's
