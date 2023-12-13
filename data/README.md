@@ -614,11 +614,11 @@ Waar is de afbeelding te vinden? Kies uit:
 
 
 
-## Bronnen_links
-[bronnen.csv> bevat de volgende velden:
+## Bronnen
+Het bestand [bronnen.csv](bronnen.csv) bevat de volgende velden:
 
-#### monument_id
-De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv>.
+#### gebouwid
+De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv](gebouwen.csv).
 
 #### muurschildering_id
 
@@ -626,10 +626,9 @@ Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurs
 
 
 #### links
-Dit kan een wikidata item zijn, maar ook een link naar een webpagina waar het gebouw of de muurschildering beschreven wordt.
+Dit kan een wikidata item zijn (bijvoorbeeld van een boek), maar ook een link naar een artikel in Delpher of een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
-#### Fysieke locatie
-Indien niet digitaal, waar is de bron te raadplegen?
+
 
 
 
