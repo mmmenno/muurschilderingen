@@ -580,18 +580,34 @@ De datum van de bedreigende gebeurtenis, in het formaat `dd-mm-jjjj`.
 
 
 ## Afbeeldingen
-[afbeeldingen.csv> bevat de volgende velden:
 
-#### muurschildering_id
+Op een aantal plaatsen zijn afbeeldingen van gebouwen en de muurschilderingen daarin te vinden, vooral in de RCE beeldbank en op Wikimedia Commons (met een flinke overlap). Op beide plekken kan en wordt al een verbinding met het gebouw gelegd. Hier beperken we ons daarom tot het verbinden van afbeeldingen met muurschilderingen. Het bestand [afbeeldingen.csv](afbeeldingen.csv) bevat de volgende velden:
+
+#### afbeelding
+
+- komt de afbeelding van Wikimedia Commons, geef dan de bestandsnaam zoals die bijvoorbeeld [hier](https://commons.wikimedia.org/wiki/File:%27t_Zandt_-_Mariakerk_-_muurschildering_noordzijde.jpg) staat, bovenaan de pagina, zonder 'File:' ervoor. In dit geval dus `'t Zandt - Mariakerk - muurschildering noordzijde.jpg`
+- komt de afbeelding van de RCE beeldbank, kopieer dan de url uit de adresbalk, als in <https://beeldbank.cultureelerfgoed.nl/rce-mediabank/detail/c1cbb975-edef-a394-038c-42ccae40e095/media/8ab84d0d-de77-6516-57f0-8da035a3d731>. Soms staat er ook wat rommel achter, beginnend met een vraagteken. Dat hoeft niet meegekopieerd te worden.
+- wordt de afbeelding lokaal opgeslagen, geef dan de bestandsnaam
+
+Het wordt aanbevolen eigen afbeeldingen, mits ze onder een open licentie aangeboden kunnen worden, via Wikimedia Commons te publiceren. Daar zijn ze voor iedereen toegankelijk en bruikbaar. Het is onduidelijk waar afbeeldingen 'lokaal' opgeslagen moeten worden en het is weinig duurzaam.
+
+#### muurschildering
 
 Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
 
-#### jaartal_foto
+#### jaar
 
-Wanneer is de afbeelding gemaakt?
+In welk jaar is de afbeelding gemaakt? Formaat `jjjj`.
 
-#### link
-Link naar de afbeelding online (RCE beeldbank of Wikimedia), ofwel betreffende muurschildering of gebouw
+#### locatie
+
+Waar is de afbeelding te vinden? Kies uit:
+
+| keuze |
+| :---- |
+| commons |
+| rce |
+| lokaal |
 
 
 
