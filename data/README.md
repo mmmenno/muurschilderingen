@@ -323,13 +323,13 @@ De breedte van de muurschildering in centimeters
 | ---- | ---------------------------- |
 | baksteen | <https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac>|
 | beton | <https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7> |
-| natuursteen | <https://data.cultureelerfgoed.nl/term/id/cht/41febb28-264d-4b64-a6ef-5716e43c0154> |
+| natuursteen | <https://data.cultureelerfgoed.nl/term/id/abr/e063fc0a-b9b4-4064-a257-e6a5f5d6475e> |
 | graniet | <https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f>|
 | tufsteen | <https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5> |
 | kalksteen | <https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53> |
 | keien | <https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988> |
-| kloostermop | <https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988> |
-| ijsselsteen | <https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9> |
+| kloostermop | <https://data.cultureelerfgoed.nl/term/id/cht/7c556686-e7d7-4681-81f2-b2a2b73af01a> |
+| ijsselsteen | <https://data.cultureelerfgoed.nl/term/id/cht/acef9ca8-368a-4cf6-9035-e65408674b82> |
 | zandsteen | <https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d> |
 
 Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker (Bentheimer zandsteen) of anders. Zoeken in de CHT [doe je hier](https://thesaurus.cultureelerfgoed.nl/search) (vink Cultuurhistorische Thesaurus aan). De CHT URI is het 'Internetadres van de resource', zie bijvoorbeeld onderaan de [Bentheimer zandsteen pagina](https://thesaurus.cultureelerfgoed.nl/concept/cht:5bc0df3e-f90b-496d-af67-b131c239cc7d/nl). De CHT is hiërarchisch geordend, dus `Bentheimer zandsteen` valt binnen `zandsteen`, etc.
