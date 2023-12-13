@@ -377,7 +377,7 @@ Kies één van de volgende termen:
 Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker ([beenderlijm](https://data.cultureelerfgoed.nl/term/id/cht/48f4bf0b-d3e0-42f5-be61-bfe5a8b1315c)) of anders.
 
 
-#### schade door vervuiling
+#### vervuilingsschade
 
 Kies een categorie
 
@@ -391,7 +391,9 @@ Kies een categorie
 Of aangeven in percentages?
 
 
-#### (vocht)vlekken
+#### vlekken
+
+Schade door (vocht)vlekken.
 
 | categorie |
 | :-------- |
@@ -400,7 +402,7 @@ Of aangeven in percentages?
 | in mindere mate |
 | onbetekenend |
 
-#### micro bacteriele activiteit
+#### microbacterieel
 
 | categorie |
 | :-------- |
@@ -410,7 +412,7 @@ Of aangeven in percentages?
 | onbetekenend |
 
 
-#### schade door zout
+#### zoutschade
 
 | categorie |
 | :-------- |
@@ -437,7 +439,9 @@ Of aangeven in percentages?
 | in mindere mate |
 | onbetekenend |
 
-#### beschadiging in verf en onderliggende lagen
+#### verfbeschadigingen
+
+beschadiging in verf en onderliggende lagen
 
 | categorie |
 | :-------- |
@@ -456,13 +460,13 @@ Of aangeven in percentages?
 | onbetekenend |
 
 
-#### opmerkingen betreffende schade
+#### schade_opmerkingen
 
 Nadere beschrijving schade
 
-#### datum notatie schade
+#### schade\_vastgesteld\_op
 
-../../....
+Datum, in formaat `dd-mm-jjjj`.
 
 
 
