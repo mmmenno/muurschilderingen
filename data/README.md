@@ -323,7 +323,7 @@ De breedte van de muurschildering in centimeters
 | ---- | ---------------------------- |
 | baksteen | <https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac>|
 | beton | <https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7> |
-| natuursteen | <https://data.cultureelerfgoed.nl/term/id/abr/e063fc0a-b9b4-4064-a257-e6a5f5d6475e> |
+| natuursteen | <https://data.cultureelerfgoed.nl/term/id/cht/160dd0cb-52ec-4320-82a0-16cad8889f5d> |
 | graniet | <https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f>|
 | tufsteen | <https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5> |
 | kalksteen | <https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53> |
