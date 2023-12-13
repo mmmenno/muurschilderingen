@@ -7,7 +7,6 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [muurschilderingen](#Muurschilderingen)
 - [kunsthistorisch](#Kunsthistorisch)
 - [materiaaltechnisch](#Materiaaltechnisch)
-- [kunsthistorisch](#Kunsthistorisch)
 - [restauraties](#Restauraties)
 - [bedreigende-gebeurtenissen](#bedreigende-gebeurtenissen)
 - [afbeeldingen](#Afbeeldingen)
@@ -303,99 +302,6 @@ Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering
 
 
 
-
-
-
-## Bedreigende gebeurtenissen
-Het bestand [bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
-
-#### gebouwid
-
-De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'. Niet verplicht indien een muurschilderingid is opgegeven.
-
-#### muurschilderingid
-
-Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv). Niet verplicht indien een gebouwid is opgegeven.
-
-#### soort_gebeurtenis
-
-| keuze |
-| ----- |
-| aardbeving |
-| brand |
-| lekkage |
-| overstroming |
-
-
-#### locatie
-Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
-
-#### mate van ernst bedreigende gebeurtenis
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-<!--
-Geef de ernst  aan op de volgende schaal:
-100-75 % : zeer ernstig
-75-50 % : ernstig
-50-25 % : behoorlijk
-25-0 % : gering
--->
-
-#### beschrijving_gebeurtenis
-Beschrijf de bedreigende gebeurtenis
-
-#### datum_gebeurtenis
-
-De datum van de bedreigende gebeurtenis, in het formaat `dd-mm-jjjj`.
-
-
-
-## Restauraties
-
-[restauraties.csv] () bevat de volgende velden:
-
-#### gebouwid
-
-De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'.
-
-
-#### begin_restauratie
-
-Het beginjaar, als `jjjj`.
-
-
-#### einde_restauratie
-
-Het eindjaar, als `jjjj`.
-
-
-#### bijbehorende restaurator
-
-Naam bedrijf / restaurator
-
-#### activiteit
-
-Wat was / is belangrijkste activiteit geweest
-Vrij invoerveld of keuzelijst van maken?
-
-
-#### beschrijving_restauratie
-
-Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
-
-#### restauratieverslagen
-
-Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale locatie.
-
-
-
-
 ## Materiaaltechnisch
 
 [materiaaltechnisch.csv> bevat de volgende velden:
@@ -559,21 +465,69 @@ Nadere beschrijving schade
 
 
 
+
+
+
+
+
+## Restauraties
+
+[restauraties.csv] () bevat de volgende velden:
+
+#### gebouwid
+
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'.
+
+
+#### begin_restauratie
+
+Het beginjaar, als `jjjj`.
+
+
+#### einde_restauratie
+
+Het eindjaar, als `jjjj`.
+
+
+#### bijbehorende restaurator
+
+Naam bedrijf / restaurator
+
+#### activiteit
+
+Wat was / is belangrijkste activiteit geweest
+Vrij invoerveld of keuzelijst van maken?
+
+
+#### beschrijving_restauratie
+
+Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
+
+#### restauratieverslagen
+
+Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale locatie.
+
+
+
+
+
+
+
 ## Bedreigende gebeurtenissen
+Het bestand [bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
 
-[bedreigende gebeurtenissen.csv> bevat de volgende velden:
+#### gebouwid
 
+De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'. Niet verplicht indien een muurschilderingid is opgegeven.
 
-#### monument-id
-Vul hier het id van het gebouw in
+#### muurschilderingid
 
-#### muurschildering-id
-vul hier het id nummer van de muurschildering in
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv). Niet verplicht indien een gebouwid is opgegeven.
 
 #### soort_gebeurtenis
 
-| keuzelijst |
-| :-------- |
+| keuze |
+| ----- |
 | aardbeving |
 | brand |
 | lekkage |
@@ -581,23 +535,40 @@ vul hier het id nummer van de muurschildering in
 
 
 #### locatie
-waar in het gebouw is de bedreigende gebeurtenis
+Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
 
-#### ernst_bedreigende_gebeurtenis
+#### mate van ernst bedreigende gebeurtenis
 
-keuzelijst:
-- heel ernstig
-- ernstig
-- behoorlijk
-- beetje
+| categorie |
+| :-------- |
+| omvangrijk |
+| in grote mate |
+| in mindere mate |
+| onbetekenend |
 
-#### beschrijving_bedreigende_gebeurtenis
+<!--
+Geef de ernst  aan op de volgende schaal:
+100-75 % : zeer ernstig
+75-50 % : ernstig
+50-25 % : behoorlijk
+25-0 % : gering
+-->
 
-Beschrijving van de bedreigende gebeurtenis
+#### beschrijving_gebeurtenis
+Beschrijf de bedreigende gebeurtenis
 
-#### datum_bedreigende_gebeurtenis
+#### datum_gebeurtenis
 
-../../....
+De datum van de bedreigende gebeurtenis, in het formaat `dd-mm-jjjj`.
+
+
+
+
+
+
+
+
+
 
 
 
