@@ -625,7 +625,7 @@ De identifier van het gebouw zoals dat voorkomt in [gebouwen.csv](gebouwen.csv).
 
 Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
 
-#### bron
+#### link
 Dit kan een wikidata item zijn (bijvoorbeeld van een boek), maar ook een link naar een artikel in Delpher of een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
 
