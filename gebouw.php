@@ -30,7 +30,23 @@ if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
 //print_r($gebouw);
 
 
+// GEGEVENS OVERZICHT UIT CSV HALEN
+$overzicht = array();
+if (($handle = fopen("data/muurschilderingen-overzicht.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+      if(!isset($colnames)){
+        $colnames = $data;
+      }
+      if($data[0] == $id){
+        foreach ($data as $k => $v) {
+          $overzicht[$colnames[$k]] = $v;
+        }
+      }
+    }
+    fclose($handle);
+}
 
+//print_r($overzicht);
 
 
 // GEGEVENS GEBOUW VAN WIKIDATA HALEN
@@ -96,7 +112,20 @@ if (($handle = fopen("data/muurschilderingen.csv", "r")) !== FALSE) {
     fclose($handle);
 }
 
+//ksort($schilderingen,SORT_NATURAL);
 
+function sortByOrder($a, $b) {
+    if ($a['volgnr'] > $b['volgnr']) {
+        return 1;
+    } elseif ($a['volgnr'] < $b['volgnr']) {
+        return -1;
+    }
+    return 0;
+}
+
+usort($schilderingen, "sortByOrder");
+
+//print_r($schilderingen);
 
 
 
@@ -202,7 +231,28 @@ include("_parts/header.php");
 				</table>
 
         <img class="wikiafb" src="<?= $wdinfo['afb'] ?>?width=500" />
-        <p><?= $gebouw['bouwgeschiedenis_restauratiegeschiedenis_herbestemming'] ?></p>
+        
+        <p>
+          <strong>type verwarming</strong>: <?= $gebouw['type_verwarming'] ?><br />
+          <strong>type verwarming sinds</strong>: <?= $gebouw['type_verwarming_sinds'] ?><br />
+          <strong>huidige functie</strong>: <?= $gebouw['huidige_functie'] ?>
+        </p>
+
+        <p>
+          <strong>bouwgeschiedenis</strong><br />
+          <?= $gebouw['bouwgeschiedenis'] ?>
+        </p>
+
+        <p>
+          <strong>restauratiegeschiedenis</strong><br />
+          <?= $gebouw['restauratiegeschiedenis'] ?>
+        </p>
+
+        <p>
+          <strong>schadegeschiedenis</strong><br />
+          <?= $gebouw['schadegeschiedenis'] ?>
+        </p>
+
 			</div>
 			<div class="col-md-4">
 				<div id="map"></div>
@@ -215,10 +265,18 @@ include("_parts/header.php");
     <div class="row">
 
 
-      <div class="col-md-6">
+      <div class="col-md-6" style="overflow:hidden">
 
         <h2>Algemene beschrijving muurschilderingen</h2>
-        <p><?= $gebouw['beschrijving_schildering'] ?></p>
+        <p><?= $overzicht['beschrijving'] ?></p>
+
+        <p>
+          <strong>culturele waardestelling</strong>: <?= $overzicht['culturele_waardestelling'] ?><br />
+          <strong>beoordeling staat conditie</strong>: <?= $overzicht['beoordeling_staat_conditie'] ?><br />
+          <strong>aanbeveling restauratie consolidatie</strong>: <?= $overzicht['aanbeveling_restauratie_consolidatie'] ?><br />
+          <strong>beschrijving staat conditie</strong>: <?= $overzicht['beschrijving_staat_conditie'] ?><br />
+          <strong>laatste conditiebeschrijving</strong>: <?= $overzicht['laatste_conditiebeschrijving'] ?>
+        </p>
 
         <h2>Situatieschema</h2>
         <?= $schemaimg ?>
@@ -248,16 +306,14 @@ include("_parts/header.php");
           <table class="table">
             <tr>
               <th>id</th>
-              <th>gebouw</th>
               <th>positie</th>
               <th>beschrijving</th>
             </tr>
           <?php foreach($schilderingen as $schildering){ ?>
             <tr>
               <td><a href="muurschildering.php?id=<?= $schildering['id'] ?>"><?= $schildering['id'] ?></a></td>
-              <td><a href="gebouw.php?id=<?= $schildering['gebouw'] ?>"><?= $schildering['gebouw'] ?></a></td>
               <td><?= $schildering['positie'] ?></td>
-              <td><?= nl2br($schildering['beschrijving']) ?></td>          
+              <td><?= nl2br($schildering['titel']) ?></td>          
             </tr>
           <?php } ?>
           </table>

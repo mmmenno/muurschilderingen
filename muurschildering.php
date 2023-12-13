@@ -6,15 +6,28 @@ include("_infra/functions.php");
 $muralid = $_GET['id'];
 
 // data uit muurschilderingen.csv halen
-$schilderingen = array();
+$metadata = array();
+$i = 0;
 if (($handle = fopen("data/muurschilderingen.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
-        if($data[0]==$muralid){
-        	$metadata = $data;
+
+    	$i++;
+    	if($i==1){
+    		$fieldnames = $data;
+    		continue;
+    	}
+        if($data[0]!=$muralid){
+        	continue;
+        }
+
+        for($n=0; $n<count($data);$n++){
+        	$metadata[$fieldnames[$n]] = $data[$n];
         }
     }
     fclose($handle);
 }
+
+
 
 // afbeeldingen uit afbeeldingen.csv halen
 $imgs = array();
@@ -93,19 +106,29 @@ if (($handle = fopen("data/kunsthistorisch.csv", "r")) !== FALSE) {
     		continue;
     	}
 
-        if($data[1]!=$muralid){
+        if($data[0]!=$muralid){
         	continue;
         }
 
         for($n=0; $n<count($data);$n++){
+
+        	if($fieldnames[$n]=="motief_thema"){
+        		$themes = explode(",",$data[$n]);
+        		$themelinks = array();
+        		foreach($themes as $theme){
+        			$themelinks[] = '<a href="https://www.wikidata.org/wiki/' . trim($theme) . '">' . trim($theme) . '</a>';
+        		}
+        		$data[$n] = implode(", ",$themelinks);
+        	}
         	$kunsthist[$fieldnames[$n]] = $data[$n];
         }
     }
     fclose($handle);
 }
-unset($kunsthist['id']);
-unset($kunsthist['muurschildering']);
-$kunsthist['iconclass'] = '<a href="' . $kunsthist['iconclass'] . '">' . $kunsthist['iconclass'] . '</a>';
+unset($kunsthist['motief']);
+unset($kunsthist['muurschilderingid']);
+unset($kunsthist['personen_en_wezens']);
+
 
 
 
@@ -159,8 +182,8 @@ foreach ($data['results']['bindings'] as $rec) {
 
 // us er een schema?
 $schemaimg = "<p>Er is geen situatieschema.</p>";
-if(file_exists("_assets/img/schemas/" . $metadata[1] . ".jpg")){
-  $schemaimg = '<img class="schemaimg" src="_assets/img/schemas/' . $metadata[1] . '.jpg" />';
+if(file_exists("_assets/img/schemas/" . $metadata['gebouwid'] . ".jpg")){
+  $schemaimg = '<img class="schemaimg" src="_assets/img/schemas/' . $metadata['gebouwid'] . '.jpg" />';
 }
 
 include("_parts/header.php");
@@ -172,7 +195,7 @@ include("_parts/header.php");
 
 	<div class="container-fluid">
 
-		<h1>Muurschildering <?= $metadata[0] ?></h1>
+		<h1>Muurschildering <?= $metadata['id'] ?></h1>
 
 
 
@@ -180,40 +203,18 @@ include("_parts/header.php");
 
 			<div class="col-md-6">
 				<h2>basisgegevens</h2>
+        		
         		<table class="table">
+					<?php 
+					foreach ($metadata as $key => $value) { 
+						if($key == "gebouwid"){
+							$value = '<a href="gebouw.php?id=' . $value . '">' . $value . '</a>'; 
+						}
+					?>
 					<tr>
-						<th>id</th><td><?= $metadata[0] ?></td>
+						<th><?= str_replace("_"," ",$key) ?></th><td><?= $value ?></td>
 					</tr>
-					<tr>
-						<th>gebouw</th><td><a href="gebouw.php?id=<?= $metadata[1] ?>"><?= $metadata[1] ?></a></td>
-					</tr>
-					<tr>
-						<th>positie in schema</th><td><?= $metadata[2] ?></td>
-					</tr>
-					<tr>
-						<th>beschrijving</th><td><?= $metadata[3] ?></td>
-					</tr>
-					<tr>
-						<th>ruimte</th><td><?= $metadata[5] ?></td>
-					</tr>
-					<tr>
-						<th>locatie in ruimte</th><td><?= $metadata[6] ?></td>
-					</tr>
-					<tr>
-						<th>oriëntatie</th><td><?= $metadata[7] ?></td>
-					</tr>
-					<tr>
-						<th>specificering locatie</th><td><?= $metadata[8] ?></td>
-					</tr>
-					<tr>
-						<th>datering vroegst</th><td><?= $metadata[9] ?></td>
-					</tr>
-					<tr>
-						<th>datering laatst</th><td><?= $metadata[10] ?></td>
-					</tr>
-					<tr>
-						<th>datering opmerking</th><td><?= $metadata[11] ?></td>
-					</tr>
+					<?php } ?>
 				</table>
 
 

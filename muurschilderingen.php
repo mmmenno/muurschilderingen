@@ -38,14 +38,14 @@ include("_parts/header.php");
 						<th>id</th>
 						<th>gebouw</th>
 						<th>positie</th>
-						<th>beschrijving</th>
+						<th>titel</th>
 					</tr>
 				<?php foreach($schilderingen as $schildering){ ?>
 					<tr>
 						<td><a href="muurschildering.php?id=<?= $schildering['id'] ?>"><?= $schildering['id'] ?></a></td>
-						<td><a href="gebouw.php?id=<?= $schildering['gebouw'] ?>"><?= $schildering['gebouw'] ?></a></td>
+						<td><a href="gebouw.php?id=<?= $schildering['gebouwid'] ?>"><?= $schildering['gebouwid'] ?></a></td>
 						<td><?= $schildering['positie'] ?></td>
-						<td><?= $schildering['beschrijving'] ?></td>					
+						<td><?= $schildering['titel'] ?></td>					
 					</tr>
 				<?php } ?>
 				</table>
