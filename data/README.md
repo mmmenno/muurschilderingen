@@ -80,6 +80,12 @@ Naam invoerder informatie over restaturatiegeschiedenis en schadegeschiedenis
 
 
 
+
+
+
+
+
+
 ## Muurschilderingen overzicht
 
 De tabel [muurschilderingen-overzicht.csv](muurschilderingen-overzicht.csv) is bedoeld om per gebouw alle muurschilderingen samen kort te beschrijven en iets te zeggen over conditie en waardestelling van het geheel aan muurschilderingen. De csv bevat de volgende velden:
@@ -183,6 +189,12 @@ Eventueel nader aan te duiden locatie. Voorbeelden: 'linker nis noordzijde', 'zu
 | noordwest |
 
 
+#### specifieke_locatie
+
+Eventuele specificatie van de locatie in de ruimte.
+
+
+
 
 
 
@@ -216,9 +228,9 @@ Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk 
 
 Eventuele extra informatie over datering
 
-#### motief_opmerking
+#### ~~motief~~
 
-Eventuele extra informatie over datering
+Niet meer nodig, want bij de Qnummers in het veld `motief_thema` is al opgenomen tot welke 'klasse' ze horen (bijbelverhaal, artistiek thema, mens, apostel, taxon, etc.) 
 
 
 #### motief_thema
@@ -245,6 +257,11 @@ Een overzicht van artistieke thema's vind je op <https://w.wiki/8RLS>
 Een overzicht van bijbelverhalen vind je op <https://w.wiki/8RLV>
 
 
+#### ~~personen\_en\_wezens~~
+
+Niet meer nodig, want bij de Qnummers in het veld `motief_thema` is al opgenomen welke personen en wezens afgebeeld worden.
+
+
 #### motief_ornamentiek
 
 | term | cultuurhistorische thesaurus | aat |
@@ -259,14 +276,13 @@ Een overzicht van bijbelverhalen vind je op <https://w.wiki/8RLV>
 | plantmotief |  | <https://vocab.getty.edu/aat/300164599> |
 | ster |  | <https://vocab.getty.edu/aat/300009811> |
 
-Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI. Zoek bijvoorbeeld binnen de lijst [patroon (ontwerpelementen)](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300010108) of [motieven](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300009700).
+Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI. Zoek bijvoorbeeld binnen de lijst [patroon (ontwerpelementen)](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300010108) of [motieven](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300009700). Of doorzoek de hele AAT op <https://vocab.getty.edu/> (selecteer AAT voor zoekveld). Dat kan ook in het Nederlands, zoals bijvoorbeeld [deze zoekactie op 'vlecht'](https://vocab.getty.edu/resource/getty/search?q=vlecht&luceneIndex=Brief&indexDataset=AAT&_form=%2F) laat zien.
 
 #### motief_tekens
 
 | term | cultuurhistorische thesaurus | aat |
 | :--- | :--------------------------- | :-- |
 | inscripties |  | <https://vocab.getty.edu/aat/300028702> |
-| keurmerken |  |  |
 | merkteken |  | <https://vocab.getty.edu/aat/300028744> |
 | wapenschilden | <https://data.cultureelerfgoed.nl/term/id/cht/c58475d5-0795-4623-b4be-ea1524f4b4fb> | <https://vocab.getty.edu/aat/300138227> |
 | wijdingskruisen |  | <https://vocab.getty.edu/aat/300395632> |
@@ -280,6 +296,11 @@ Eventuele nadere opmerking
 #### restauratie_kunsthistorisch
 
 Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering. Zijn bijvoorbeeld bepaalde lagen van een schildering bijvoorbeeld verwijderd of juist overschilderd.
+
+
+
+
+
 
 
 
