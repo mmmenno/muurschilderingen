@@ -523,13 +523,9 @@ Is er een restauratieverslag bekend? Link naar digitale locatie.
 ## Bedreigende gebeurtenissen
 Het bestand [bedreigende-gebeurtenissen.csv](bedreigende-gebeurtenissen.csv) bevat de volgende velden:
 
-#### gebouwid
+#### muurschildering
 
-De identifier van het gebouw zoals vastgelegd in [gebouwen.csv](gebouwen.csv), bijvoorbeeld 'RM8247'. Niet verplicht indien een muurschilderingid is opgegeven.
-
-#### muurschilderingid
-
-Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv). Niet verplicht indien een gebouwid is opgegeven.
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv).
 
 #### soort_gebeurtenis
 
@@ -544,7 +540,7 @@ Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurs
 #### locatie
 Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
 
-#### mate van ernst bedreigende gebeurtenis
+#### ernst_gebeurtenis
 
 | categorie |
 | :-------- |
@@ -561,10 +557,11 @@ Geef de ernst  aan op de volgende schaal:
 25-0 % : gering
 -->
 
-#### beschrijving_gebeurtenis
-Beschrijf de bedreigende gebeurtenis
+#### beschrijving
 
-#### datum_gebeurtenis
+Beschrijving van de bedreigende gebeurtenis
+
+#### datum
 
 De datum van de bedreigende gebeurtenis, in het formaat `dd-mm-jjjj`.
 
