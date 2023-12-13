@@ -479,7 +479,7 @@ Datum, in formaat `dd-mm-jjjj`.
 
 ## Restauraties
 
-[restauraties.csv] () bevat de volgende velden:
+[restauraties.csv](restauraties.csv) bevat de volgende velden:
 
 #### gebouwid
 
