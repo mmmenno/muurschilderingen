@@ -304,7 +304,7 @@ Opmerkingen restauratie van belang voor kunsthistorische beschrijving / datering
 
 ## Materiaaltechnisch
 
-[materiaaltechnisch.csv> bevat de volgende velden:
+[materiaaltechnisch.csv](materiaaltechnisch.csv) bevat de volgende velden:
 
 #### muurschildering_id
 
@@ -333,13 +333,13 @@ De breedte van de muurschildering in centimeters
 | ijsselsteen | <https://data.cultureelerfgoed.nl/term/id/cht/2d1df478-abf5-4aec-a47b-d4d1787b0de9> |
 | zandsteen | <https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d> |
 
-Laat leeg indien 'onbepaald', geef een cultuurhistorische thesaurus URI indien specifieker (Kloostermop, Doornikse steen, Bentheimer zandsteen) of anders.
+Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker (Bentheimer zandsteen) of anders. Zoeken in de CHT [doe je hier](https://thesaurus.cultureelerfgoed.nl/search) (vink Cultuurhistorische Thesaurus aan). De CHT URI is het 'Internetadres van de resource', zie bijvoorbeeld onderaan de [Bentheimer zandsteen pagina](https://thesaurus.cultureelerfgoed.nl/concept/cht:5bc0df3e-f90b-496d-af67-b131c239cc7d/nl). De CHT is hiërarchisch geordend, dus `Bentheimer zandsteen` valt binnen `zandsteen`, etc.
 
 
-
-#### opmerking over constructie
+#### opmerking\_over\_constructie
 
 Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander soort constructie dan bovenkant
+
 
 #### schildertechniek
 
@@ -359,20 +359,23 @@ Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus |
 | :--- | :--------------------------- |
-| kalk | [> |
-| kalk op pleister | [> |
+| kalk | <https://data.cultureelerfgoed.nl/term/id/cht/2f06513a-a4dd-4001-9a7b-efea781fab2c> |
+| kalk op pleister |  |
 | pleister | <https://data.cultureelerfgoed.nl/term/id/cht/1a289d6b-fbdc-4888-a953-4c046f16c89e> |
 | overig |  |
 
 
 #### bindmiddelen
 
-keuzelijst:
-- temperaverf, ei of caseine
-- (lijn)olie
-- lijm
-- kalkwater
-- overig
+| term | cultuurhistorische thesaurus |
+| :--- | :--------------------------- |
+| temperaverf | <https://data.cultureelerfgoed.nl/term/id/cht/443e133a-7c93-4c8f-af20-19ff4b3b6be0> |
+| lijnolie | <https://data.cultureelerfgoed.nl/term/id/cht/eef09c5c-23fc-4796-bda9-9b73e992288b> |
+| lijm | <https://data.cultureelerfgoed.nl/term/id/cht/c623de2a-4e2a-476d-9d3c-10c4501cabad> |
+| kalkwater | <https://data.cultureelerfgoed.nl/term/id/cht/04f74ebd-68b1-4fba-ad07-65034a5e6f0c> |
+
+Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker ([beenderlijm](https://data.cultureelerfgoed.nl/term/id/cht/48f4bf0b-d3e0-42f5-be61-bfe5a8b1315c)) of anders.
+
 
 #### schade door vervuiling
 
