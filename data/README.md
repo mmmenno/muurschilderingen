@@ -496,9 +496,9 @@ Het beginjaar, als `jjjj`.
 Het eindjaar, als `jjjj`.
 
 
-#### bijbehorende restaurator
+#### restaurator
 
-Naam bedrijf / restaurator
+Naam bedrijf / restaurator die de restauratie heeft uitgevoerd.
 
 #### activiteit
 
@@ -506,13 +506,13 @@ Wat was / is belangrijkste activiteit geweest
 Vrij invoerveld of keuzelijst van maken?
 
 
-#### beschrijving_restauratie
+#### beschrijving
 
 Korte omschrijving restauratie, ook bouwkundig. Materiaalgebruik restauratie opschrijven als informatie bekend is, retouches etc.
 
-#### restauratieverslagen
+#### restauratieverslag
 
-Zijn restauratieverslagen bekend en waar bevinden deze zich, link naar digitale locatie.
+Is er een restauratieverslag bekend? Link naar digitale locatie.
 
 
 
