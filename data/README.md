@@ -11,6 +11,7 @@ Dit document beschrijft in welke velden en met welke waarden een en ander beschr
 - [bedreigende-gebeurtenissen](#bedreigende-gebeurtenissen)
 - [afbeeldingen](#Afbeeldingen)
 - [bronnen](#Bronnen)
+- [schadegeschiedenis](#Schadegeschiedenis)
 
 Eerst nog een algemene opmerking inzake bronnen. Onder [bronnen_links](#Bronnen-links) zie je hoe je links naar bronnen bij gebouwen _en/of_ muurschilderingen op kunt nemen.
 
