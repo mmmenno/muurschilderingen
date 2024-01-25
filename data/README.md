@@ -568,7 +568,13 @@ Dit kan een wikidata item zijn (bijvoorbeeld van een boek), maar ook een link na
 
 
 
+
+
+
+
 ## Schadegeschiedenis
+
+Het bestand [schadegeschiedenis.csv](schadegeschiedenis.csv) bevat de volgende velden:
 
 #### muurschildering_id
 
