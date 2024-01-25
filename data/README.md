@@ -69,9 +69,9 @@ Opsomming korte beschrijving met aanduiding periodes / jaartallen bouwgeschieden
 #### restauratiegeschiedenis
 Korte beschrijving met aanduiding periodes / jaartallen restauraties
 
-#### schadegeschiedenis
+#### schadegeschiedenis_algemeen
 Korte beschrijving van scheurvorming, verzakkingen, lekkage mbt eventuele schade muurschilderingen.
-Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv
+Specifieke informatie met jaartallen kan in bedreigende gebeurtenissen.csv en specifieke gegevens in schedegeschiedenis.csv.
 
 #### ingevoerd_door:
 Naam invoerder informatie over restaturatiegeschiedenis en schadegeschiedenis
