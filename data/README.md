@@ -403,96 +403,6 @@ Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI in
 | nee |
 
 
-#### vervuilingsschade
-
-Kies een categorie
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-Of aangeven in percentages?
-
-
-#### vlekken
-
-Schade door (vocht)vlekken.
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-#### microbacterieel
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-
-#### zoutschade
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-#### pleisterschade
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-#### scheuren
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-#### verfbeschadigingen
-
-beschadiging in verf en onderliggende lagen
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-#### verkleuring
-
-| categorie |
-| :-------- |
-| omvangrijk |
-| in grote mate |
-| in mindere mate |
-| onbetekenend |
-
-
-#### schade_opmerkingen
-
-Nadere beschrijving schade
-
-#### schade\_vastgesteld\_op
-
-Datum, in formaat `dd-mm-jjjj`.
 
 
 
@@ -756,5 +666,104 @@ Geef aan hoeveel procent van de schildering origineel is.
 | poederend |
 
 
+#### vervuilingsschade
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+
+#### vlekken
+
+Schade door (vocht)vlekken.
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### microbacterieel
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### zoutschade
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### pleisterwerk
+
+| keuze |
+| :---- |
+| loszittend |
+| verzand |
+| cementpleister |
+| gaten |
+
+#### pleisterschade
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### scheuren
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### verfbeschadigingen
+
+beschadiging in verf en onderliggende lagen
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### verkleuring
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+
+#### schade_opmerkingen
+
+Nadere beschrijving schade
+
+#### schade\_vastgesteld\_op
+
+Datum, in formaat `dd-mm-jjjj`.
+
+
+#### schade\_vastgesteld\_door
+
+Wie heeft schade vastgesteld?
 
 
