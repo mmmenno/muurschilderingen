@@ -226,33 +226,37 @@ Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk 
 
 Eventuele extra informatie over datering
 
-#### ~~motief~~
+#### gehele concept aanwezig
 
-Niet meer nodig, want bij de Qnummers in het veld `motief_thema` is al opgenomen tot welke 'klasse' ze horen (bijbelverhaal, artistiek thema, mens, apostel, taxon, etc.) 
+| keuze |
+| ----- |
+| ja |
+| nee |
 
+#### percentage aanwezig
 
-#### motief_thema
-<!--
+Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele concept
+
+#### motief
+
+Kies één van de volgende termen:
 
 | keuze |
 | ----- |
 | allegorie |
 | ornamentiek |
 | personen en wezens |
-| tekens en merken |
+| tekens |
 | verhalend |
 
-
-#### motief_thema_specifiek
-
-
-Verhalend, Personen en wezens, Allegorieen
--->
+#### motief_thema
 
 Geef een Wikidata Qnummer, bijvoorbeeld van een artistiek thema of bijbelverhaal. Ook evangelisten, dieren, objecten, etc. zijn op Wikidata te vinden.
 
 Een overzicht van artistieke thema's vind je op <https://w.wiki/8RLS>
 Een overzicht van bijbelverhalen vind je op <https://w.wiki/8RLV>
+
+Zet tussen haakjes in volgorde het thema waarnaar het Q nummer verwijst.
 
 
 #### ~~personen\_en\_wezens~~
@@ -262,21 +266,35 @@ Niet meer nodig, want bij de Qnummers in het veld `motief_thema` is al opgenomen
 
 #### motief_ornamentiek
 
+Kies één van de volgende termen:
+
 | term | cultuurhistorische thesaurus | aat |
 | :--- | :--------------------------- | :-- |
-| cartouche |  | <https://vocab.getty.edu/aat/300010256> |
+| beslag en cartouche |  | <https://vocab.getty.edu/aat/300010256> |
+| biezen |  | <http://vocab.getty.edu/page/aat/300011879> |
 | bloem |  | <https://vocab.getty.edu/aat/300375563> |
+| boom en struik |
+| fruit en bessen |
 | geometrisch motief |  | <https://vocab.getty.edu/aat/300009764> |
 | lint |  | <https://vocab.getty.edu/aat/300387440> |
 | keperband |  | <https://vocab.getty.edu/aat/300165028> |
+| materiaalimitaties
 | meander |  | <https://vocab.getty.edu/aat/300165279> |
 | palmette |  | <https://vocab.getty.edu/aat/300009995> |
 | plantmotief |  | <https://vocab.getty.edu/aat/300164599> |
 | ster |  | <https://vocab.getty.edu/aat/300009811> |
+| trap |
+
+![image](https://github.com/mmmenno/muurschilderingen/assets/152972000/41ad16af-4ee9-407d-b4fc-a6738c911280)
+
+
+
 
 Indien een term niet in het bovenstaande lijstje voorkomt, geef dan een AAT  URI. Zoek bijvoorbeeld binnen de lijst [patroon (ontwerpelementen)](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300010108) of [motieven](https://www.getty.edu/vow/AATHierarchy?find=&logic=AND&note=&subjectid=300009700). Of doorzoek de hele AAT op <https://vocab.getty.edu/> (selecteer AAT voor zoekveld). Dat kan ook in het Nederlands, zoals bijvoorbeeld [deze zoekactie op 'vlecht'](https://vocab.getty.edu/resource/getty/search?q=vlecht&luceneIndex=Brief&indexDataset=AAT&_form=%2F) laat zien.
 
 #### motief_tekens
+
+Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus | aat |
 | :--- | :--------------------------- | :-- |
@@ -318,6 +336,8 @@ De hoogte van de muurschildering in centimeters
 De breedte van de muurschildering in centimeters
 
 #### constructie
+
+Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus |
 | ---- | ---------------------------- |
@@ -374,6 +394,13 @@ Kies één van de volgende termen:
 | kalkwater | <https://data.cultureelerfgoed.nl/term/id/cht/04f74ebd-68b1-4fba-ad07-65034a5e6f0c> |
 
 Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker ([beenderlijm](https://data.cultureelerfgoed.nl/term/id/cht/48f4bf0b-d3e0-42f5-be61-bfe5a8b1315c)) of anders.
+
+#### verguldingen
+
+| keuze |
+| ----- |
+| ja |
+| nee |
 
 
 #### vervuilingsschade
@@ -628,6 +655,105 @@ Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurs
 #### link
 Dit kan een wikidata item zijn (bijvoorbeeld van een boek), maar ook een link naar een artikel in Delpher of een webpagina waar het gebouw of de muurschildering beschreven wordt.
 
+
+
+## Schadegeschiedenis
+
+#### muurschildering_id
+
+Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurschilderingen.csv)
+
+#### terugkerende_problematiek
+
+Beschrijf kort wat de terugkerende problematiek is.
+
+#### inspectiefrequentie
+
+Wanneer moet de schildering weer geïnspecteerd worden? Kies uit:
+
+| keuze |
+| :---- |
+| 1 - 2 jaar |
+| 2 - 5 jaar |
+| 5 - 10 jaar |
+| 10 - 15 jaar |
+| 15 - 20 jaar |
+
+#### externe_factoren
+
+Waardoor is de schade ontstaan? Kies uit:
+
+| keuze |
+| :---- |
+| constructiefactoren |
+| gebruik van gebouw |
+| fysische krachten |
+| dieven en vandalen |
+| brand |
+| water |
+| ongedierte en schimmel |
+| veronreiniging |
+| licht en straling |
+| verkeerde temperatuur |
+| verkeerde relatieve vochtigheid |
+
+#### percentage_origineel_werk
+
+Geef aan hoeveel procent van de schildering origineel is.
+
+
+#### percentage_origineel_werk
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### aanwezigheid_van_retouches
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### mate_van_overschildering
+
+| keuze |
+| :---- |
+| 0 - 25 % |
+| 25 - 50 % |
+| 50 - 75 % |
+| 75 - 100 % |
+
+#### aangebrachte_lagen
+
+| keuze |
+| :---- |
+| kalkresten |
+| kalklagen |
+| vernis |
+| pleisterlagen |
+| fixatief |
+| verflagen |
+
+#### ondergrond
+
+| keuze |
+| :---- |
+| goed |
+| matig |
+| slecht |
+
+#### verf los
+
+| keuze |
+| :---- |
+| bladderend |
+| poederend |
 
 
 
