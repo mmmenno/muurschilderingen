@@ -227,14 +227,14 @@ Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk 
 
 Eventuele extra informatie over datering
 
-#### gehele concept aanwezig
+#### gehele\_concept\_aanwezig
 
 | keuze |
 | ----- |
 | ja |
 | nee |
 
-#### percentage aanwezig
+#### percentage_aanwezig
 
 Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele concept
 
