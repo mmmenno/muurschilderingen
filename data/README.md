@@ -52,9 +52,11 @@ Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de 
 | kies optie |
 | ----------- |
 | convector kachel |
+| cv |
 | electrische kachel |
 | gaskachel / gashaard |
 | hout- of pelletkachel |
+| infrarood |
 | open haard |
 | vloerverwarming |
 | overig |
@@ -598,53 +600,51 @@ Wanneer moet de schildering weer geïnspecteerd worden? Kies uit:
 
 #### externe_factoren
 
-Waardoor is de schade ontstaan? Kies uit:
+Waardoor is de schade ontstaan? Vul in, meerdere factoren mogelijk, gescheiden door komma:
 
-| keuze |
-| :---- |
-| constructiefactoren |
-| gebruik van gebouw |
-| fysische krachten |
-| dieven en vandalen |
-| brand |
-| water |
-| ongedierte en schimmel |
-| veronreiniging |
-| licht en straling |
-| verkeerde temperatuur |
-| verkeerde relatieve vochtigheid |
+Bijvoorbeeld:
+aardbevingen, klimatologische schommelingen, verzakkingen
+
 
 #### percentage_origineel_werk
 
 Geef aan hoeveel procent van de schildering origineel is.
+Het percentage origineel werk gaat om de hoeveelheid aanwezig t.o.v. de complete voorstelling.
 
-
-#### percentage_origineel_werk
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### aanwezigheid_van_retouches
 
-| keuze |
-| :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+Het percentage retouche is de hoveelheid retouche aanwezig in het overgebleven fragment.
 
-#### mate_van_overschildering
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
+
 
 #### aangebrachte_lagen
 
@@ -677,10 +677,17 @@ Geef aan hoeveel procent van de schildering origineel is.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 
 #### vlekken
@@ -689,28 +696,49 @@ Schade door (vocht)vlekken.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### microbacterieel
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### zoutschade
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### pleisterwerk
 
@@ -725,19 +753,33 @@ Schade door (vocht)vlekken.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### scheuren
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### verfbeschadigingen
 
@@ -745,19 +787,33 @@ beschadiging in verf en onderliggende lagen
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### verkleuring
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 
 #### schade_opmerkingen
