@@ -645,16 +645,15 @@ Het percentage retouche is de hoveelheid retouche aanwezig in het zichtbare frag
 | 100 % |
 
 
-#### aangebrachte_lagen
+#### aangebrachte_restauratie_lagen
 
 | keuze |
 | :---- |
-| kalkresten |
-| kalklagen |
-| vernis |
-| pleisterlagen |
 | fixatief |
 | verflagen |
+| vernis |
+| strappo |
+| overig |
 
 #### ondergrond
 
