@@ -627,7 +627,7 @@ Het percentage origineel werk gaat om de hoeveelheid aanwezig in het zichtbare f
 
 #### aanwezigheid_van_retouches
 
-Het percentage retouche is de hoveelheid retouche aanwezig in het overgebleven fragment.
+Het percentage retouche is de hoveelheid retouche aanwezig in het zichtbare fragment.
 
 
 | keuze |
