@@ -668,28 +668,13 @@ Het percentage retouche is de hoveelheid retouche aanwezig in het zichtbare frag
 | keuze |
 | :---- |
 | bladderend |
+| corrosie |
 | poederend |
-
-#### vervuilingsschade
-
-| keuze |
-| :---- |
-| 0 % |
-| 10 % |
-| 20 % |
-| 30 % |
-| 40 % |
-| 50 % |
-| 60 % |
-| 70 % |
-| 80 % |
-| 90 % |
-| 100 % |
 
 
 #### vlekken
 
-Schade door (vocht)vlekken.
+Schade vanuit de ondergrond.
 
 | keuze |
 | :---- |
@@ -709,78 +694,52 @@ Schade door (vocht)vlekken.
 
 | keuze |
 | :---- |
-| 0 % |
-| 10 % |
-| 20 % |
-| 30 % |
-| 40 % |
-| 50 % |
-| 60 % |
-| 70 % |
-| 80 % |
-| 90 % |
-| 100 % |
+| onbetekenend |
+| in mindere mate |
+| in grote mate |
+| omvangrijk |
 
-#### zoutschade
+#### zouten
 
 | keuze |
 | :---- |
-| 0 % |
-| 10 % |
-| 20 % |
-| 30 % |
-| 40 % |
-| 50 % |
-| 60 % |
-| 70 % |
-| 80 % |
-| 90 % |
-| 100 % |
+| onbetekenend |
+| in mindere mate |
+| in grote mate |
+| omvangrijk |
 
-#### pleisterwerk
+#### restauratiepleisterwerk
 
 | keuze |
 | :---- |
-| loszittend |
+| cement |
+| gips |
+| kalk |
+| perliet |
+| synthetisch additief |
+| overig |
+
+#### pleister
+
+| keuze |
+| :---- |
+| craquelé |
+| lacunes |
+| onthecht |
 | verzand |
-| cementpleister |
-| gaten |
-
-#### pleisterschade
-
-| keuze |
-| :---- |
-| 0 % |
-| 10 % |
-| 20 % |
-| 30 % |
-| 40 % |
-| 50 % |
-| 60 % |
-| 70 % |
-| 80 % |
-| 90 % |
-| 100 % |
 
 #### scheuren
 
 | keuze |
 | :---- |
-| 0 % |
-| 10 % |
-| 20 % |
-| 30 % |
-| 40 % |
-| 50 % |
-| 60 % |
-| 70 % |
-| 80 % |
-| 90 % |
-| 100 % |
+| onbetekenend |
+| in mindere mate |
+| in grote mate |
+| omvangrijk |
 
 #### verfbeschadigingen
 
-beschadiging in verf en onderliggende lagen
+Beschadiging in verf en onderliggende lagen door gereedschapssporen door blootlegging of krassen, meer mechanisch.
 
 | keuze |
 | :---- |
@@ -797,6 +756,7 @@ beschadiging in verf en onderliggende lagen
 | 100 % |
 
 #### verkleuring
+Veroorzaakt door materiaal aangebracht aan het oppervlek op de verflagen.
 
 | keuze |
 | :---- |
