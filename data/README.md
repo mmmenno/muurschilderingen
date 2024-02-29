@@ -347,9 +347,9 @@ Kies één van de volgende termen:
 Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker (Bentheimer zandsteen) of anders. Zoeken in de CHT [doe je hier](https://thesaurus.cultureelerfgoed.nl/search) (vink Cultuurhistorische Thesaurus aan). De CHT URI is het 'Internetadres van de resource', zie bijvoorbeeld onderaan de [Bentheimer zandsteen pagina](https://thesaurus.cultureelerfgoed.nl/concept/cht:5bc0df3e-f90b-496d-af67-b131c239cc7d/nl). De CHT is hiërarchisch geordend, dus `Bentheimer zandsteen` valt binnen `zandsteen`, etc.
 
 
-#### opmerking\_over\_constructie
+#### opmerking\_over\_vervaardiging
 
-Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander soort constructie dan bovenkant
+Nadere beschrijving over vervaardiging, zijn er schetsen opgebracht, schetslijnen met krijt, inkrassingen etc.
 
 
 #### schildertechniek
