@@ -463,7 +463,7 @@ Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurs
 | brand |
 | lekkage |
 | overstroming |
-
+| vandalisme |
 
 #### locatie
 Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
@@ -663,13 +663,12 @@ Het percentage retouche is de hoveelheid retouche aanwezig in het zichtbare frag
 | matig |
 | slecht |
 
-#### verf los
+#### verf
 
 | keuze |
 | :---- |
 | bladderend |
 | poederend |
-
 
 #### vervuilingsschade
 
