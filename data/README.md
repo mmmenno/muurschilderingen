@@ -609,8 +609,7 @@ Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele conce
 #### percentage_origineel_werk
 
 Geef aan hoeveel procent van de schildering origineel is.
-Het percentage origineel werk gaat om de hoeveelheid aanwezig t.o.v. de complete voorstelling.
-
+Het percentage origineel werk gaat om de hoeveelheid aanwezig in het zichtbare fragment van de voorstelling.
 
 | keuze |
 | :---- |
