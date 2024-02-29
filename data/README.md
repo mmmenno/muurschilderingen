@@ -227,18 +227,7 @@ Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk 
 
 #### datering_opmerking
 
-Eventuele extra informatie over datering
-
-#### gehele\_concept\_aanwezig
-
-| keuze |
-| ----- |
-| ja |
-| nee |
-
-#### percentage_aanwezig
-
-Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele concept
+Eventuele extra informatie over datering.
 
 #### motief
 
@@ -604,6 +593,17 @@ Waardoor is de schade ontstaan? Vul in, meerdere factoren mogelijk, gescheiden d
 
 Bijvoorbeeld:
 aardbevingen, klimatologische schommelingen, verzakkingen
+
+#### gehele\_concept\_aanwezig
+
+| keuze |
+| ----- |
+| ja |
+| nee |
+
+#### percentage_aanwezig
+
+Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele concept indien te beoordelen.
 
 
 #### percentage_origineel_werk
