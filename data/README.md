@@ -239,6 +239,7 @@ Kies één van de volgende termen:
 | ornamentiek |
 | personen en wezens |
 | tekens |
+| trompe l'oeil |
 | verhalend |
 
 #### motief_thema
@@ -265,17 +266,21 @@ Kies één van de volgende termen:
 | beslag en cartouche |  | <https://vocab.getty.edu/aat/300010256> |
 | biezen |  | <http://vocab.getty.edu/page/aat/300011879> |
 | bloem |  | <https://vocab.getty.edu/aat/300375563> |
-| boom en struik |
-| fruit en bessen |
+| bloemrank |  | <https://vocab.getty.edu/aat/300010135> |
+| boom en struik |  | <https://vocab.getty.edu/aat/300132412> |
+| decoratieve band |  | <https://vocab.getty.edu/aat/300009700> |
+| fruit en bessen |  | <https://vocab.getty.edu/aat/300011868> |
 | geometrisch motief |  | <https://vocab.getty.edu/aat/300009764> |
-| lint |  | <https://vocab.getty.edu/aat/300387440> |
 | keperband |  | <https://vocab.getty.edu/aat/300165028> |
-| materiaalimitaties
+| kleurvlakken |  | <https://vocab.getty.edu/aat/300164595> |
+| lint |  | <https://vocab.getty.edu/aat/300387440> |
+| materiaalimitaties |  | <https://vocab.getty.edu/aat/300015640> | 
 | meander |  | <https://vocab.getty.edu/aat/300165279> |
 | palmette |  | <https://vocab.getty.edu/aat/300009995> |
 | plantmotief |  | <https://vocab.getty.edu/aat/300164599> |
+| rolwerk |  | <https://vocab.getty.edu/aat/300010205> |
 | ster |  | <https://vocab.getty.edu/aat/300009811> |
-| trap |
+
 
 ![image](https://github.com/mmmenno/muurschilderingen/assets/152972000/41ad16af-4ee9-407d-b4fc-a6738c911280)
 
@@ -370,6 +375,7 @@ Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus |
 | :--- | :--------------------------- |
+| kalei | |
 | kalk | <https://data.cultureelerfgoed.nl/term/id/cht/2f06513a-a4dd-4001-9a7b-efea781fab2c> |
 | kalk op pleister |  |
 | pleister | <https://data.cultureelerfgoed.nl/term/id/cht/1a289d6b-fbdc-4888-a953-4c046f16c89e> |
@@ -590,6 +596,20 @@ Wanneer moet de schildering weer geïnspecteerd worden? Kies uit:
 #### externe_factoren
 
 Waardoor is de schade ontstaan? Vul in, meerdere factoren mogelijk, gescheiden door komma:
+Bijvoorbeeld:
+aardbevingen
+klimatologische schommelingen
+verzakkingen
+vocht
+gebruik van gebouw
+dieven en vandalen
+brand
+water
+ongedierte en schimmel
+verontreiniging
+licht en straling
+verkeerde temperatuur
+verkeerde relatieve vochtigheid
 
 Bijvoorbeeld:
 aardbevingen, klimatologische schommelingen, verzakkingen
@@ -647,19 +667,23 @@ Het percentage retouche is de hoveelheid retouche aanwezig in het zichtbare frag
 
 #### aangebrachte_restauratie_lagen
 
-| keuze |
-| :---- |
-| fixatief |
-| verflagen |
-| vernis |
-| strappo |
-| overig |
+Vrij invoerveld.
+In te voeren waarden:
+fixatief
+verflagen
+vernis
+strappo
+overig
+
+Indien meerdere waarden, invoeren met ; bijvoorbeeld:
+verflagen; vernis
 
 #### ondergrond
 
 | keuze |
 | :---- |
 | goed |
+| redelijk |
 | matig |
 | slecht |
 
@@ -709,24 +733,34 @@ Schade vanuit de ondergrond.
 | omvangrijk |
 
 #### restauratiepleisterwerk
+Vrij invoerveld.
+In te voeren waarden:
+cement
+cementpleister
+gaten
+gips
+kalk
+loszittend
+perliet
+synthetisch additief
+verzand
+overig
 
-| keuze |
-| :---- |
-| cement |
-| gips |
-| kalk |
-| perliet |
-| synthetisch additief |
-| overig |
+Indien meerdere waarden, invoeren met ; bijvoorbeeld:
+cementpleister; loszittend; gaten
+
 
 #### pleister
+Vrij invoerveld.
+In te voeren waarden:
+craquelé
+lacunes
+onthecht
+verzand
 
-| keuze |
-| :---- |
-| craquelé |
-| lacunes |
-| onthecht |
-| verzand |
+Indien meerdere waarden, invoeren met ; bijvoorbeeld:
+lacunes; onthecht
+
 
 #### scheuren
 
