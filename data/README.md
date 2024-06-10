@@ -821,4 +821,9 @@ Datum, in formaat `dd-mm-jjjj`.
 
 Wie heeft schade vastgesteld?
 
+#### hoe_vastgesteld
+
+Is de schade vastgesteld vanaf de steiger / na werkzaamheden of vanaf de grond?
+Dit laatste impliceert dat de vaststelling mogelijk niet gezien of niet geheel correct is vastgesteld.
+
 
