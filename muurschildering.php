@@ -172,9 +172,11 @@ $json = getSparqlResults($endpoint,$sparql);
 $data = json_decode($json,true);
 
 $wdbronnen = array();
-foreach ($data['results']['bindings'] as $rec) {
-	//print_r($rec);
-	$wdbronnen[$rec['item']['value']] = $rec['itemLabel']['value'];
+if(isset($data['results']['bindings'])){
+	foreach ($data['results']['bindings'] as $rec) {
+		//print_r($rec);
+		$wdbronnen[$rec['item']['value']] = $rec['itemLabel']['value'];
+	}
 }
 
 

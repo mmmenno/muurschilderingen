@@ -61,6 +61,9 @@ foreach ($data['results']['bindings'] as $rec) {
 }
 
 
+$ououchecked = array('RM9465','RM9780','RM26270','RM26265','RM40295','RM29894','RM21303','RM31612','RM29897','RM34513','RM9479','RM40306','RM9474');
+
+
 include("_parts/header.php");
 
 ?>
@@ -86,7 +89,7 @@ include("_parts/header.php");
 					</tr>
 				<?php foreach($gebouwen as $gebouw){ ?>
 					<tr>
-						<td><a href="gebouw.php?id=<?= $gebouw['id'] ?>"><?= $gebouw['id'] ?></a></td>
+						<td><a href="gebouw.php?id=<?= $gebouw['id'] ?>"><?php if(in_array($gebouw['id'],$ououchecked)){ echo "<strong>"; } ?><?= $gebouw['id'] ?><?php if(in_array($gebouw['id'],$ououchecked)){ echo "</strong>"; } ?></a></td>
 						<td><a href="gebouw.php?id=<?= $gebouw['id'] ?>"><?= $gebouw['naam'] ?></a></td>
 						<td><?= $wdinfo[$gebouw['wikidata']]['itemLabel'] ?></td>
 						<td><a href="https://monumentenregister.cultureelerfgoed.nl/monumenten/<?= $gebouw['monumentnummer'] ?>"><?= $gebouw['monumentnummer'] ?></a></td>
