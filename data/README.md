@@ -52,9 +52,11 @@ Het lijkt logischer dit op het Wikidata-item van het gebouw aan te geven met de 
 | kies optie |
 | ----------- |
 | convector kachel |
+| cv |
 | electrische kachel |
 | gaskachel / gashaard |
 | hout- of pelletkachel |
+| infrarood |
 | open haard |
 | vloerverwarming |
 | overig |
@@ -225,18 +227,7 @@ Jaartal `jjjj` van de laatst mogelijke vervaardigingsdatum, '1325' als het werk 
 
 #### datering_opmerking
 
-Eventuele extra informatie over datering
-
-#### gehele\_concept\_aanwezig
-
-| keuze |
-| ----- |
-| ja |
-| nee |
-
-#### percentage_aanwezig
-
-Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele concept
+Eventuele extra informatie over datering.
 
 #### motief
 
@@ -248,6 +239,7 @@ Kies één van de volgende termen:
 | ornamentiek |
 | personen en wezens |
 | tekens |
+| trompe l'oeil |
 | verhalend |
 
 #### motief_thema
@@ -274,17 +266,21 @@ Kies één van de volgende termen:
 | beslag en cartouche |  | <https://vocab.getty.edu/aat/300010256> |
 | biezen |  | <http://vocab.getty.edu/page/aat/300011879> |
 | bloem |  | <https://vocab.getty.edu/aat/300375563> |
-| boom en struik |
-| fruit en bessen |
+| bloemrank |  | <https://vocab.getty.edu/aat/300010135> |
+| boom en struik |  | <https://vocab.getty.edu/aat/300132412> |
+| decoratieve band |  | <https://vocab.getty.edu/aat/300009700> |
+| fruit en bessen |  | <https://vocab.getty.edu/aat/300011868> |
 | geometrisch motief |  | <https://vocab.getty.edu/aat/300009764> |
-| lint |  | <https://vocab.getty.edu/aat/300387440> |
 | keperband |  | <https://vocab.getty.edu/aat/300165028> |
-| materiaalimitaties
+| kleurvlakken |  | <https://vocab.getty.edu/aat/300164595> |
+| lint |  | <https://vocab.getty.edu/aat/300387440> |
+| materiaalimitaties |  | <https://vocab.getty.edu/aat/300015640> | 
 | meander |  | <https://vocab.getty.edu/aat/300165279> |
 | palmette |  | <https://vocab.getty.edu/aat/300009995> |
 | plantmotief |  | <https://vocab.getty.edu/aat/300164599> |
+| rolwerk |  | <https://vocab.getty.edu/aat/300010205> |
 | ster |  | <https://vocab.getty.edu/aat/300009811> |
-| trap |
+
 
 ![image](https://github.com/mmmenno/muurschilderingen/assets/152972000/41ad16af-4ee9-407d-b4fc-a6738c911280)
 
@@ -356,9 +352,9 @@ Kies één van de volgende termen:
 Laat leeg indien 'onbepaald', geef een Cultuurhistorische Thesaurus (CHT) URI indien specifieker (Bentheimer zandsteen) of anders. Zoeken in de CHT [doe je hier](https://thesaurus.cultureelerfgoed.nl/search) (vink Cultuurhistorische Thesaurus aan). De CHT URI is het 'Internetadres van de resource', zie bijvoorbeeld onderaan de [Bentheimer zandsteen pagina](https://thesaurus.cultureelerfgoed.nl/concept/cht:5bc0df3e-f90b-496d-af67-b131c239cc7d/nl). De CHT is hiërarchisch geordend, dus `Bentheimer zandsteen` valt binnen `zandsteen`, etc.
 
 
-#### opmerking\_over\_constructie
+#### opmerking\_over\_vervaardiging
 
-Nadere beschrijving constructie, bijvoorbeeld onderkant muur is van een ander soort constructie dan bovenkant
+Nadere beschrijving over vervaardiging, zijn er schetsen opgebracht, schetslijnen met krijt, inkrassingen etc.
 
 
 #### schildertechniek
@@ -379,6 +375,7 @@ Kies één van de volgende termen:
 
 | term | cultuurhistorische thesaurus |
 | :--- | :--------------------------- |
+| kalei | |
 | kalk | <https://data.cultureelerfgoed.nl/term/id/cht/2f06513a-a4dd-4001-9a7b-efea781fab2c> |
 | kalk op pleister |  |
 | pleister | <https://data.cultureelerfgoed.nl/term/id/cht/1a289d6b-fbdc-4888-a953-4c046f16c89e> |
@@ -472,7 +469,7 @@ Het id van de muurschildering, zoals vastgelegd in [muurschilderingen.csv](muurs
 | brand |
 | lekkage |
 | overstroming |
-
+| vandalisme |
 
 #### locatie
 Waar in het gebouw / muurschildering is de schade door de bedreigende gebeurtenis?
@@ -598,166 +595,217 @@ Wanneer moet de schildering weer geïnspecteerd worden? Kies uit:
 
 #### externe_factoren
 
-Waardoor is de schade ontstaan? Kies uit:
+Waardoor is de schade ontstaan? Vul in, meerdere factoren mogelijk, gescheiden door komma:
+Bijvoorbeeld:
+aardbevingen
+klimatologische schommelingen
+verzakkingen
+vocht
+gebruik van gebouw
+dieven en vandalen
+brand
+water
+ongedierte en schimmel
+verontreiniging
+licht en straling
+verkeerde temperatuur
+verkeerde relatieve vochtigheid
+
+Bijvoorbeeld:
+aardbevingen, klimatologische schommelingen, verzakkingen
+
+#### gehele\_concept\_aanwezig
 
 | keuze |
-| :---- |
-| constructiefactoren |
-| gebruik van gebouw |
-| fysische krachten |
-| dieven en vandalen |
-| brand |
-| water |
-| ongedierte en schimmel |
-| veronreiniging |
-| licht en straling |
-| verkeerde temperatuur |
-| verkeerde relatieve vochtigheid |
+| ----- |
+| ja |
+| nee |
+
+#### percentage_aanwezig
+
+Geef percentage (numeriek) aan, hoeveel procent is nog aanwezig van gehele concept indien te beoordelen.
+
 
 #### percentage_origineel_werk
 
 Geef aan hoeveel procent van de schildering origineel is.
-
-
-#### percentage_origineel_werk
+Het percentage origineel werk gaat om de hoeveelheid aanwezig in het zichtbare fragment van de voorstelling.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### aanwezigheid_van_retouches
 
-| keuze |
-| :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+Het percentage retouche is de hoveelheid retouche aanwezig in het zichtbare fragment.
 
-#### mate_van_overschildering
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
-#### aangebrachte_lagen
 
-| keuze |
-| :---- |
-| kalkresten |
-| kalklagen |
-| vernis |
-| pleisterlagen |
-| fixatief |
-| verflagen |
+#### aangebrachte_restauratie_lagen
+
+Vrij invoerveld.
+In te voeren waarden:
+fixatief
+verflagen
+vernis
+strappo
+overig
+
+Indien meerdere waarden, invoeren met ; bijvoorbeeld:
+verflagen; vernis
 
 #### ondergrond
 
 | keuze |
 | :---- |
 | goed |
+| redelijk |
 | matig |
 | slecht |
 
-#### verf los
+#### verf
 
 | keuze |
 | :---- |
 | bladderend |
+| corrosie |
 | poederend |
-
-
-#### vervuilingsschade
-
-| keuze |
-| :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
 
 
 #### vlekken
 
-Schade door (vocht)vlekken.
+Schade vanuit de ondergrond.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### microbacterieel
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| onbetekenend |
+| in mindere mate |
+| in grote mate |
+| omvangrijk |
 
-#### zoutschade
-
-| keuze |
-| :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
-
-#### pleisterwerk
+#### zouten
 
 | keuze |
 | :---- |
-| loszittend |
-| verzand |
-| cementpleister |
-| gaten |
+| onbetekenend |
+| in mindere mate |
+| in grote mate |
+| omvangrijk |
 
-#### pleisterschade
+#### restauratiepleisterwerk
+Vrij invoerveld.
+In te voeren waarden:
+cement
+cement additief
+cementpleister
+gaten
+gips
+kalk
+loszittend
+perliet
+synthetisch additief
+verzand
+overig
 
-| keuze |
-| :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+Indien meerdere waarden, invoeren met ; bijvoorbeeld:
+cementpleister; loszittend; gaten
+
+
+#### pleister
+Vrij invoerveld.
+In te voeren waarden:
+craquelé
+lacunes
+onthecht
+verzand
+
+Indien meerdere waarden, invoeren met ; bijvoorbeeld:
+lacunes; onthecht
+
 
 #### scheuren
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| onbetekenend |
+| in mindere mate |
+| in grote mate |
+| omvangrijk |
 
 #### verfbeschadigingen
 
-beschadiging in verf en onderliggende lagen
+Beschadiging in verf en onderliggende lagen door gereedschapssporen door blootlegging of krassen, meer mechanisch.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 #### verkleuring
+Veroorzaakt door materiaal aangebracht aan het oppervlek op de verflagen.
 
 | keuze |
 | :---- |
-| 0 - 25 % |
-| 25 - 50 % |
-| 50 - 75 % |
-| 75 - 100 % |
+| 0 % |
+| 10 % |
+| 20 % |
+| 30 % |
+| 40 % |
+| 50 % |
+| 60 % |
+| 70 % |
+| 80 % |
+| 90 % |
+| 100 % |
 
 
 #### schade_opmerkingen
@@ -772,5 +820,10 @@ Datum, in formaat `dd-mm-jjjj`.
 #### schade\_vastgesteld\_door
 
 Wie heeft schade vastgesteld?
+
+#### hoe_vastgesteld
+
+Is de schade vastgesteld vanaf de steiger / na werkzaamheden of vanaf de grond?
+Dit laatste impliceert dat de vaststelling mogelijk niet gezien of niet geheel correct is vastgesteld.
 
 
