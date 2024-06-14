@@ -65,6 +65,17 @@ if (($handle = fopen("data/afbeeldingen.csv", "r")) !== FALSE) {
     fclose($handle);
 }
 
+function sortByYear($a, $b) {
+    if ($a['jaar'] > $b['jaar']) {
+        return 1;
+    } elseif ($a['jaar'] < $b['jaar']) {
+        return -1;
+    }
+    return 0;
+}
+
+usort($imgs, 'sortByYear');
+
 
 // materiaaltechnische staat uit csv halen
 $mattech = array();
@@ -182,11 +193,25 @@ if(isset($data['results']['bindings'])){
 
 
 
-// us er een schema?
+// IS ER EEN SITUATIESCHETS VAN SCHILDERINGEN IN DIT GEBOUW?
 $schemaimg = "<p>Er is geen situatieschema.</p>";
 if(file_exists("_assets/img/schemas/" . $metadata['gebouwid'] . ".jpg")){
   $schemaimg = '<img class="schemaimg" src="_assets/img/schemas/' . $metadata['gebouwid'] . '.jpg" />';
 }
+// of staat er een (betere) situatieschets in plattegronden.csv?
+if (($handle = fopen("data/plattegronden.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+      if($data[0] == $metadata['gebouwid']){
+        $imgname = str_replace(" ","_",$data[1]);
+        $md5hashed = md5($imgname);
+        $imgurl = "https://upload.wikimedia.org/wikipedia/commons/thumb/" . substr($md5hashed,0,1) . "/" . substr($md5hashed,0,2) . "/" . $imgname . "/800px-" . $imgname;
+        $imglink = "https://commons.wikimedia.org/wiki/File:" . urlencode($imgname);
+        $schemaimg = '<a href="' . $imglink . '"><img class="schemaimg" src="' . $imgurl . '" /></a>';
+      }
+    }
+    fclose($handle);
+}
+
 
 include("_parts/header.php");
 
