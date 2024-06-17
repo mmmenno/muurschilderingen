@@ -127,18 +127,56 @@ if (($handle = fopen("data/kunsthistorisch.csv", "r")) !== FALSE) {
         		$themes = explode(",",$data[$n]);
         		$themelinks = array();
         		foreach($themes as $theme){
-        			$themelinks[] = '<a href="https://www.wikidata.org/wiki/' . trim($theme) . '">' . trim($theme) . '</a>';
+        			if(preg_match("/(Q[0-9]+) ?(.*)/",$theme,$found)){
+        				$themelinks[] = '<a href="https://www.wikidata.org/wiki/' . $found[1] . '">' . trim($found[0]) . '</a>';
+        			}else{
+        				$themelinks[] = trim($theme);
+        			}
+        			
         		}
         		$data[$n] = implode(", ",$themelinks);
+        	}elseif($fieldnames[$n]=="motief_ornamentiek"){
+	        	$ornaments = array(
+	        		"beslag en cartouche" => "https://vocab.getty.edu/aat/300010256",
+					"biezen" => "http://vocab.getty.edu/page/aat/300011879",
+					"bloem"	=>	"https://vocab.getty.edu/aat/300375563",
+					"bloemrank"	=> "https://vocab.getty.edu/aat/300010135",
+					"boom en struik" =>	"https://vocab.getty.edu/aat/300132412",
+					"decoratieve band" => "https://vocab.getty.edu/aat/300009700",
+					"fruit en bessen" => "https://vocab.getty.edu/aat/300011868",
+					"geometrisch motief" => "https://vocab.getty.edu/aat/300009764",
+					"keperband" => "https://vocab.getty.edu/aat/300165028",
+					"kleurvlakken" => "https://vocab.getty.edu/aat/300164595",
+					"lint" => "https://vocab.getty.edu/aat/300387440",
+					"materiaalimitaties" => "https://vocab.getty.edu/aat/300015640",
+					"meander" => "https://vocab.getty.edu/aat/300165279",
+					"palmette" => "https://vocab.getty.edu/aat/300009995",
+					"plantmotief" => "https://vocab.getty.edu/aat/300164599",
+					"rolwerk" => "https://vocab.getty.edu/aat/300010205",
+					"ster" => "https://vocab.getty.edu/aat/300009811"
+				);
+
+	        	if(array_key_exists($data[$n],$ornaments)){
+	        		$data[$n] = '<a href="' . $ornaments[$data[$n]] . '">' . $data[$n] . '</a>';
+	        	}
+        	}elseif($fieldnames[$n]=="motief_tekens"){
+        		$tekens = array(
+        			"inscripties" => "https://vocab.getty.edu/aat/300028702",
+					"merkteken" => "https://vocab.getty.edu/aat/300028744",
+					"wapenschilden" => "https://vocab.getty.edu/aat/300138227",
+					"wijdingskruisen" => "https://vocab.getty.edu/aat/300395632"
+				);
+				if(array_key_exists($data[$n],$tekens)){
+	        		$data[$n] = '<a href="' . $tekens[$data[$n]] . '">' . $data[$n] . '</a>';
+	        	}
         	}
         	$kunsthist[$fieldnames[$n]] = $data[$n];
         }
     }
     fclose($handle);
 }
-unset($kunsthist['motief']);
+//unset($kunsthist['motief']);
 unset($kunsthist['muurschilderingid']);
-unset($kunsthist['personen_en_wezens']);
 
 
 
@@ -234,6 +272,9 @@ include("_parts/header.php");
         		<table class="table">
 					<?php 
 					foreach ($metadata as $key => $value) { 
+						if($key == "volgnr"){
+							continue; 
+						}
 						if($key == "gebouwid"){
 							$value = '<a href="gebouw.php?id=' . $value . '">' . $value . '</a>'; 
 						}
