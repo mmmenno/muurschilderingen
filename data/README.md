@@ -387,6 +387,7 @@ Kies één van de volgende termen:
 | term | cultuurhistorische thesaurus |
 | :--- | :--------------------------- |
 | temperaverf | <https://data.cultureelerfgoed.nl/term/id/cht/443e133a-7c93-4c8f-af20-19ff4b3b6be0> |
+| temperaverf, ei of caseïne | |
 | lijnolie | <https://data.cultureelerfgoed.nl/term/id/cht/eef09c5c-23fc-4796-bda9-9b73e992288b> |
 | lijm | <https://data.cultureelerfgoed.nl/term/id/cht/c623de2a-4e2a-476d-9d3c-10c4501cabad> |
 | kalkwater | <https://data.cultureelerfgoed.nl/term/id/cht/04f74ebd-68b1-4fba-ad07-65034a5e6f0c> |
