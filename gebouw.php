@@ -30,6 +30,32 @@ if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
 //print_r($gebouw);
 
 
+// RESTAURATIEGESCHIEDENIS
+$restaurations = array();
+if (($handle = fopen("data/restauraties.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+      if(!isset($rescolnames)){
+        $rescolnames = $data;
+      }
+      if($data[1] == $id){
+        $rescol = array();
+        foreach ($data as $k => $v) {
+          if($rescolnames[$k] == "restauratieverslag"){
+            if(substr($v,0,4) == "http"){
+              $v = '<a href="' . $v . '">' . $v . '</a>';
+            }
+          }
+          $rescol[$rescolnames[$k]] = $v;
+        }
+        $restaurations[] = $rescol;
+      }
+    }
+    fclose($handle);
+}
+
+//print_r($restaurations);
+
+
 // GEGEVENS OVERZICHT UIT CSV HALEN
 $overzicht = array();
 if (($handle = fopen("data/muurschilderingen-overzicht.csv", "r")) !== FALSE) {
@@ -261,11 +287,6 @@ include("_parts/header.php");
         </p>
 
         <p>
-          <strong>restauratiegeschiedenis</strong><br />
-          <?= $gebouw['restauratiegeschiedenis'] ?>
-        </p>
-
-        <p>
           <strong>schadegeschiedenis</strong><br />
           <?= $gebouw['schadegeschiedenis'] ?>
         </p>
@@ -277,7 +298,46 @@ include("_parts/header.php");
 
 		</div>
 
+
+
+
+
+
     <h1>Muurschilderingen</h1>
+
+    
+
+    <div class="row">
+
+
+      <div class="col-md-12" style="overflow:hidden">
+
+        <h2>Restauratiegeschiedenis</h2>
+            
+        <table class="table">
+          <tr>
+            <th>begin</th>
+            <th>einde</th>
+            <th>restaurator</th>
+            <th>activiteit</th>
+            <th>beschrijving</th>
+            <th>restauratieverslag</th>
+          </tr>
+          <?php foreach ($restaurations as $restauration) { ?>
+          <tr>
+            <td><?= $restauration['begin_restauratie'] ?></td>
+            <td><?= $restauration['einde_restauratie'] ?></td>
+            <td><?= $restauration['restaurator'] ?></td>
+            <td><?= $restauration['activiteit'] ?></td>
+            <td><?= $restauration['beschrijving'] ?></td>
+            <td><?= $restauration['restauratieverslag'] ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+        
+      </div>
+
+    </div>
 
     <div class="row">
 

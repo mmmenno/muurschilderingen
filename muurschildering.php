@@ -94,6 +94,71 @@ if (($handle = fopen("data/materiaaltechnisch.csv", "r")) !== FALSE) {
         }
 
         for($n=0; $n<count($data);$n++){
+        	
+        	if($fieldnames[$n]=="constructie"){
+        		$constructions = array(
+	        		"baksteen" => "https://data.cultureelerfgoed.nl/term/id/cht/bbe4a82c-d0af-42c9-86c2-cca2e9560bac",
+					"beton" => "https://data.cultureelerfgoed.nl/term/id/cht/a64a233b-91ab-4431-afca-dac58c5b63a7",
+					"natuursteen" => "https://data.cultureelerfgoed.nl/term/id/cht/160dd0cb-52ec-4320-82a0-16cad8889f5d",
+					"graniet" => "https://data.cultureelerfgoed.nl/term/id/cht/9940cc61-e695-40f9-b0a7-ad3270091e1f",
+					"tufsteen" => "https://data.cultureelerfgoed.nl/term/id/cht/fe46430e-3e7a-4e9d-9be4-c76ee19bf2d5",
+					"kalksteen" => "https://data.cultureelerfgoed.nl/term/id/cht/b003b3b2-65d1-4aa7-bbe4-c035ae230c53",
+					"keien" => "https://data.cultureelerfgoed.nl/term/id/cht/c57a23c6-92ef-4063-9dc0-e92393931988",
+					"kloostermop" => "https://data.cultureelerfgoed.nl/term/id/cht/7c556686-e7d7-4681-81f2-b2a2b73af01a",
+					"ijsselsteen" => "https://data.cultureelerfgoed.nl/term/id/cht/acef9ca8-368a-4cf6-9035-e65408674b82",
+					"zandsteen" => "https://data.cultureelerfgoed.nl/term/id/cht/07067413-15a3-4210-a2ca-5fa80893357d"
+				);
+
+	        	if(array_key_exists($data[$n],$constructions)){
+	        		$data[$n] = '<a href="' . $constructions[$data[$n]] . '">' . $data[$n] . '</a>';
+	        	}elseif(substr($data[$n],0,4) == "http"){
+	        		$data[$n] = '<a href="' . $data[$n] . '">' . $data[$n] . '</a>';
+	        	}
+        	}
+
+        	if($fieldnames[$n]=="schildertechniek"){
+        		$techniques = array(
+	        		"graffiti" => "https://data.cultureelerfgoed.nl/term/id/cht/f302aa2a-05cf-4994-9ae9-118639374bb2",
+					"fresco" => "https://data.cultureelerfgoed.nl/term/id/cht/551d2fbc-c358-4229-aca8-320bdfacdcd7",
+					"secco" => "https://data.cultureelerfgoed.nl/term/id/cht/c7c593d5-2b94-4413-be91-0d98984458af",
+					"tekening" => "https://data.cultureelerfgoed.nl/term/id/cht/eb9e1e5b-b319-4519-a4f5-0dd26dbf4524"
+				);
+
+	        	if(array_key_exists($data[$n],$techniques)){
+	        		$data[$n] = '<a href="' . $techniques[$data[$n]] . '">' . $data[$n] . '</a>';
+	        	}elseif(substr($data[$n],0,4) == "http"){
+	        		$data[$n] = '<a href="' . $data[$n] . '">' . $data[$n] . '</a>';
+	        	}
+        	}
+
+        	if($fieldnames[$n]=="grondlaag"){
+        		$grounds = array(
+			        "kalk" => "https://data.cultureelerfgoed.nl/term/id/cht/2f06513a-a4dd-4001-9a7b-efea781fab2c",
+					"pleister" => "https://data.cultureelerfgoed.nl/term/id/cht/1a289d6b-fbdc-4888-a953-4c046f16c89e",
+				);
+
+	        	if(array_key_exists($data[$n],$grounds)){
+	        		$data[$n] = '<a href="' . $grounds[$data[$n]] . '">' . $data[$n] . '</a>';
+	        	}elseif(substr($data[$n],0,4) == "http"){
+	        		$data[$n] = '<a href="' . $data[$n] . '">' . $data[$n] . '</a>';
+	        	}
+        	}
+
+        	if($fieldnames[$n]=="bindmiddelen"){
+        		$bindmiddelen = array(
+			        "temperaverf" => "https://data.cultureelerfgoed.nl/term/id/cht/443e133a-7c93-4c8f-af20-19ff4b3b6be0",
+					"lijnolie" => "https://data.cultureelerfgoed.nl/term/id/cht/eef09c5c-23fc-4796-bda9-9b73e992288b",
+					"lijm" => "https://data.cultureelerfgoed.nl/term/id/cht/c623de2a-4e2a-476d-9d3c-10c4501cabad",
+					"kalkwater" => "https://data.cultureelerfgoed.nl/term/id/cht/04f74ebd-68b1-4fba-ad07-65034a5e6f0c"
+				);
+
+	        	if(array_key_exists($data[$n],$bindmiddelen)){
+	        		$data[$n] = '<a href="' . $bindmiddelen[$data[$n]] . '">' . $data[$n] . '</a>';
+	        	}elseif(substr($data[$n],0,4) == "http"){
+	        		$data[$n] = '<a href="' . $data[$n] . '">' . $data[$n] . '</a>';
+	        	}
+        	}
+
         	$mattech[$fieldnames[$n]] = $data[$n];
         }
     }
@@ -101,7 +166,6 @@ if (($handle = fopen("data/materiaaltechnisch.csv", "r")) !== FALSE) {
 }
 unset($mattech['id']);
 unset($mattech['muurschildering']);
-unset($mattech['afmetingen']);
 
 
 
@@ -178,6 +242,32 @@ if (($handle = fopen("data/kunsthistorisch.csv", "r")) !== FALSE) {
 //unset($kunsthist['motief']);
 unset($kunsthist['muurschilderingid']);
 
+
+
+// schadegeschiedenis uit csv halen
+$schades = array();
+$i = 0;
+if (($handle = fopen("data/schadegeschiedenis.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+
+    	$i++;
+    	if($i==1){
+    		$fieldnames = $data;
+    		continue;
+    	}
+
+        if($data[1]!=$muralid){
+        	continue;
+        }
+
+        for($n=0; $n<count($data);$n++){
+			$schades[$fieldnames[$n]] = $data[$n];
+        }
+    }
+    fclose($handle);
+}
+unset($schades['id']);
+unset($schades['muurschildering']);
 
 
 
@@ -297,7 +387,18 @@ include("_parts/header.php");
 				</table>
 
 
+				<h2>materiaaltechnisch</h2>
 
+				<table class="table">
+					<?php foreach ($mattech as $key => $value) { ?>
+					<tr>
+						<th><?= str_replace("_"," ",$key) ?></th><td><?= $value ?></td>
+					</tr>
+					<?php } ?>
+				</table>
+
+
+				
 				<h2>bronnen</h2>
         		
         		<table class="table">
@@ -316,10 +417,10 @@ include("_parts/header.php");
         		<?= $schemaimg ?>
 
 
-        		<h2>materiaaltechnisch</h2>
+        		<h2>schadegeschiedenis</h2>
 
 				<table class="table">
-					<?php foreach ($mattech as $key => $value) { ?>
+					<?php foreach ($schades as $key => $value) { ?>
 					<tr>
 						<th><?= str_replace("_"," ",$key) ?></th><td><?= $value ?></td>
 					</tr>
