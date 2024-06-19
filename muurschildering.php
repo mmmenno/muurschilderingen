@@ -308,7 +308,9 @@ if (($handle = fopen("data/bronnen.csv", "r")) !== FALSE) {
 
 $wdbronnenstring = "";
 foreach ($bronnen as $bron) {
-	$wdbronnenstring = "wd:" . str_replace("http://www.wikidata.org/entity/","",$bron) . " ";
+	if(strpos($bron,"http://www.wikidata.org/entity/") !== false){
+		$wdbronnenstring .= "wd:" . str_replace("http://www.wikidata.org/entity/","",$bron) . " ";
+	}
 }
 
 $endpoint = 'https://query.wikidata.org/sparql';
@@ -422,7 +424,15 @@ include("_parts/header.php");
         		<table class="table">
 					<?php foreach ($bronnen as $bron) { ?>
 					<tr>
-						<td><a href="<?= $bron ?>"><?= $wdbronnen[$bron] ?></a></td>
+						<td>
+							<a href="<?= $bron ?>">
+								<?php if(isset($wdbronnen[$bron])){ ?>
+									<?= $wdbronnen[$bron] ?>
+								<?php }else{ ?>
+									<?= $bron ?>
+								<?php } ?>
+							</a>
+						</td>
 					</tr>
 					<?php } ?>
 				</table>
