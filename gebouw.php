@@ -30,6 +30,26 @@ if (($handle = fopen("data/gebouwen.csv", "r")) !== FALSE) {
 //print_r($gebouw);
 
 
+// BEDREIGINGEN
+$threats = array();
+if (($handle = fopen("data/bedreigende-gebeurtenissen.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+      if(!isset($threatcolnames)){
+        $threatcolnames = $data;
+      }
+      if($data[1] == $id){
+        $threatcol = array();
+        foreach ($data as $k => $v) {
+          $threatcol[$threatcolnames[$k]] = $v;
+        }
+        $threats[] = $threatcol;
+      }
+    }
+    fclose($handle);
+}
+
+//print_r($threats);
+
 // RESTAURATIEGESCHIEDENIS
 $restaurations = array();
 if (($handle = fopen("data/restauraties.csv", "r")) !== FALSE) {
@@ -287,6 +307,11 @@ include("_parts/header.php");
         </p>
 
         <p>
+          <strong>restauratiegeschiedenis</strong><br />
+          <?= $gebouw['restauratiegeschiedenis'] ?>
+        </p>
+
+        <p>
           <strong>schadegeschiedenis</strong><br />
           <?= $gebouw['schadegeschiedenis'] ?>
         </p>
@@ -348,15 +373,53 @@ include("_parts/header.php");
         <p><?= $overzicht['beschrijving'] ?></p>
 
         <p>
-          <strong>culturele waardestelling</strong>: <?= $overzicht['culturele_waardestelling'] ?><br />
-          <strong>beoordeling staat conditie</strong>: <?= $overzicht['beoordeling_staat_conditie'] ?><br />
-          <strong>aanbeveling restauratie consolidatie</strong>: <?= $overzicht['aanbeveling_restauratie_consolidatie'] ?><br />
-          <strong>beschrijving staat conditie</strong>: <?= $overzicht['beschrijving_staat_conditie'] ?><br />
-          <strong>laatste conditiebeschrijving</strong>: <?= $overzicht['laatste_conditiebeschrijving'] ?>
+          <?php if(strlen($overzicht['culturele_waardestelling'])){ ?>
+            <strong>culturele waardestelling</strong>: <?= $overzicht['culturele_waardestelling'] ?><br />
+          <?php } ?>
+
+          <?php if(strlen($overzicht['beoordeling_staat_conditie'])){ ?>
+            <strong>beoordeling staat conditie</strong>: <?= $overzicht['beoordeling_staat_conditie'] ?><br />
+          <?php } ?>
+
+          <?php if(strlen($overzicht['aanbeveling_restauratie_consolidatie'])){ ?>
+            <strong>aanbeveling restauratie consolidatie</strong>: <?= $overzicht['aanbeveling_restauratie_consolidatie'] ?><br />
+          <?php } ?>
+
+          <?php if(strlen($overzicht['beschrijving_staat_conditie'])){ ?>
+            <strong>beschrijving staat conditie</strong>: <?= $overzicht['beschrijving_staat_conditie'] ?><br />
+          <?php } ?>
+          
+          <?php if(strlen($overzicht['laatste_conditiebeschrijving'])){ ?>
+            <strong>laatste conditiebeschrijving</strong>: <?= $overzicht['laatste_conditiebeschrijving'] ?>
+          <?php } ?>
         </p>
 
         <h2>Situatieschema</h2>
         <?= $schemaimg ?>
+
+
+        <h2>Bedreigende gebeurtenissen</h2>
+            
+        <table class="table">
+          <tr>
+            <th>muurschildering</th>
+            <th>soort_gebeurtenis</th>
+            <th>locatie</th>
+            <th>ernst_gebeurtenis</th>
+            <th>beschrijving</th>
+          </tr>
+          <?php foreach ($threats as $threat) { ?>
+          <tr>
+            <td><a href="muurschildering.php?id=<?= $threat['muurschildering'] ?>"><?= $threat['muurschildering'] ?></td>
+            <td><?= $threat['soort_gebeurtenis'] ?></td>
+            <td><?= $threat['locatie'] ?></td>
+            <td><?= $threat['ernst_gebeurtenis'] ?></td>
+            <td><?= $threat['beschrijving'] ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+
+
 
         <h2>bronnen</h2>
             

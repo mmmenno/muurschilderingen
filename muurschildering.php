@@ -270,6 +270,24 @@ unset($schades['id']);
 unset($schades['muurschildering']);
 
 
+// BEDREIGINGEN
+$threats = array();
+if (($handle = fopen("data/bedreigende-gebeurtenissen.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+      if(!isset($threatcolnames)){
+        $threatcolnames = $data;
+      }
+      if($data[2] == $muralid){
+        $threatcol = array();
+        foreach ($data as $k => $v) {
+          $threatcol[$threatcolnames[$k]] = $v;
+        }
+        $threats[] = $threatcol;
+      }
+    }
+    fclose($handle);
+}
+
 
 // bronnen info uit csv halen en labels bij wikidata halen
 $bronnen = array();
@@ -426,6 +444,26 @@ include("_parts/header.php");
 					</tr>
 					<?php } ?>
 				</table>
+
+				<h2>Bedreigende gebeurtenissen</h2>
+            
+		        <table class="table">
+		          <tr>
+		            <th>soort gebeurtenis</th>
+		            <th>locatie</th>
+		            <th>ernst gebeurtenis</th>
+		            <th>beschrijving</th>
+		          </tr>
+		          <?php foreach ($threats as $threat) { ?>
+		          <tr>
+		            <td><?= $threat['soort_gebeurtenis'] ?></td>
+		            <td><?= $threat['locatie'] ?></td>
+		            <td><?= $threat['ernst_gebeurtenis'] ?></td>
+		            <td><?= $threat['beschrijving'] ?></td>
+		          </tr>
+		          <?php } ?>
+		        </table>
+
 
 
 
