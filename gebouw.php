@@ -92,7 +92,8 @@ if (($handle = fopen("data/muurschilderingen-overzicht.csv", "r")) !== FALSE) {
     fclose($handle);
 }
 
-//print_r($overzicht);
+//print_r($colnames);
+//die;
 
 
 // GEGEVENS GEBOUW VAN WIKIDATA HALEN

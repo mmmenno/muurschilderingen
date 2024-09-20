@@ -401,7 +401,7 @@ include("_parts/header.php");
         		<table class="table">
 					<?php foreach ($kunsthist as $key => $value) { ?>
 					<tr>
-						<th><?= str_replace("_"," ",$key) ?></th><td><?= $value ?></td>
+						<th><?= str_replace("_"," ",$key) ?></th><td><?= nl2br($value) ?></td>
 					</tr>
 					<?php } ?>
 				</table>
