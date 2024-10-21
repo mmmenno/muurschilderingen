@@ -26,6 +26,10 @@ include("_parts/header.php");
 
 				<h3>Lijsten</h3>
 
+				<h4>Pilot</h4>
+
+				<p>Deze site is een tijdelijke website, het is een pilot om te testen welke informatie over muurschilderingen en op welke manier het beste geregistreerd en gepresenteerd kan worden.</p>
+
 				<h4>Gebouwen</h4>
 
 				<p>De <a href="gebouwen.php">gebouwenlijst</a> bevat gebouwen (in deze pilot Groningse kerken) waar zich muurschilderingen bevinden. Van hier klik je door naar gebouwpagina's, waar je afbeeldingen van het gebouw, overige kenmerken van het gebouw en natuurlijk de muurschilderingen te zien krijgt. 
@@ -36,7 +40,7 @@ include("_parts/header.php");
 
 				<h4>Restauraties</h4>
 
-				<p>To do!</p>
+				<p>Over 13 Groninger kerken is informatie toegevoegd.</p>
 			</div>
 				
 		</div>
