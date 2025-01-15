@@ -1,4 +1,4 @@
-"id","muurschildering","hoogte","breedte","constructie","opmerking_over_vervaardiging","schildertechniek","grondlaag","bindmiddelen","verguldingen"
+"id","muurschildering","mural:hoogte","mural:breedte","mural:constructie","mural:vervaardiging","mural:schildertechniek","mural:grondlaag","mural:bindmiddelen","mural:verguldingen"
 "1","RM9465MU1","70","70","kloostermop",,"secco","kalk op pleister","temperaverf",
 "2","RM9465MU2","100","120","kloostermop",,"secco","kalei","temperaverf",
 "3","RM9465MU3","200","200","kloostermop",,"secco","kalk op pleister","temperaverf",
